@@ -1,3 +1,3 @@
 # tauhid.github.io
 this is my website
-http://tauhid.gq/
+https://tauhidul0821.github.io/
