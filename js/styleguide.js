@@ -263,8 +263,6 @@ function LinkifyHeadersForTag(tagName) {
     header = headers[j];
     if (!hasClass(header, 'ignoreLink') && ('id' in header)) {
       if (header.id != '') {
-        LinkifyHeader(header, 'link.png', 21);
-        header.style.left = '-46px';
         header.style.position = 'relative';
       }
     }
