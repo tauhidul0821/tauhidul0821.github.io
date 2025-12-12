@@ -122,20 +122,43 @@ section h2::after {
   min-height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-top: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/my-photo/my-image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
 }
 
 .hero-content .subtitle {
   font-size: 1.8rem;
-  font-weight: 500;
-  color: #4fc08d;
-  margin-bottom: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hero-content p {
@@ -176,6 +199,26 @@ section h2::after {
 .btn-outline:hover {
   background: #4fc08d;
   color: #fff;
+}
+
+/* Transparent button for hero section */
+.btn-transparent {
+  background: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+  padding: 14px 35px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn-transparent:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #4fc08d !important;
+  color: #4fc08d !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(79, 192, 141, 0.4);
 }
 
 /* About Section */
@@ -717,6 +760,63 @@ section h2::after {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+/* CV Modal Styles */
+.cv-modal-content {
+  max-width: 90vw;
+  max-height: 95vh;
+  width: 1200px;
+  padding: 2rem;
+}
+
+.cv-actions {
+  margin: 1rem 0;
+  text-align: right;
+}
+
+.btn-download-small {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  background: #4fc08d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-download-small:hover {
+  background: #3da875;
+  transform: translateY(-2px);
+}
+
+#cvFrame {
+  width: 100%;
+  height: 75vh;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* CV Button Styles */
+.btn-cv {
+  background: #2c3e50;
+}
+
+.btn-cv:hover {
+  background: #1a252f;
+  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+}
+
+.btn-download {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn-download:hover {
+  background: #c0392b;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
 /* Footer */

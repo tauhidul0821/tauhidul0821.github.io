@@ -42,15 +42,12 @@
     <section id="home">
       <div class="container">
         <div class="hero-content">
-          <h1>Hello, I'm Tauhidul Islam</h1>
-          <p class="subtitle">Senior Software Engineer</p>
-          <p>
-            I'm a passionate software engineer at <strong><a href="https://cogwheelanalytics.com/about/#our-team" target="_blank">Cogwheel Analytics</a></strong>, 
-            a USA-based company. I specialize in building scalable web applications and solving complex problems 
-            using modern JavaScript frameworks and full-stack development.
-          </p>
-          <a href="#contact" class="btn">Get In Touch</a>
-          <a href="#work" class="btn btn-outline">View My Work</a>
+          <h1>Hi! I'm Tauhidul</h1>
+          <p class="subtitle">I'm a Web Developer Angular / JavaScript</p>
+          <div class="hero-buttons">
+            <a href="javascript:void(0)" onclick="openCVModal()" class="btn btn-transparent">View CV</a>
+            <a href="assets/cv/Tauhidul_JavaScript_Angular.pdf" download class="btn btn-transparent">Download CV</a>
+          </div>
         </div>
       </div>
     </section>
@@ -62,20 +59,26 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              I am a Senior Software Engineer with extensive experience in developing high-quality web applications. 
-              My journey in software development has equipped me with a deep understanding of modern technologies 
-              and best practices in the industry.
+              Hello! I'm <strong>Tauhidul Islam</strong>, a Senior Software Engineer with a passion for building 
+              exceptional web applications. With years of experience in the software development industry, I specialize 
+              in modern JavaScript frameworks, particularly Angular and React, along with full-stack development using Node.js.
             </p>
             <p>
-              Currently working at Cogwheel Analytics, I focus on creating efficient, scalable, and user-friendly 
-              solutions that help businesses achieve their goals. I'm passionate about learning new technologies 
-              and contributing to open-source projects.
+              Currently, I'm working at <strong><a href="https://cogwheelanalytics.com/about/#our-team" target="_blank">Cogwheel Analytics</a></strong>, 
+              a USA-based digital marketing analytics company, where I lead the development of scalable web applications 
+              and advanced reporting platforms that help branded hotels enhance their online presence and achieve their business goals.
             </p>
             <p>
-              Connect with me on 
+              My journey in software development has equipped me with a deep understanding of modern technologies, 
+              best practices, and the ability to solve complex problems efficiently. I believe in writing clean, 
+              maintainable code and following industry standards to deliver high-quality solutions.
+            </p>
+            <p>
+              I'm passionate about learning new technologies, contributing to open-source projects, and sharing 
+              knowledge with the developer community. Connect with me on 
               <a href="https://github.com/tauhidul0821" target="_blank">GitHub</a> to explore my projects, or 
               follow me on <a href="https://www.linkedin.com/in/md-tauhidul-islam-bbb93b81" target="_blank">LinkedIn</a> 
-              where I share insights about software development and technology.
+              where I share insights about software development and technology trends.
             </p>
           </div>
           <div class="about-info">
@@ -90,6 +93,12 @@
             </div>
             <div class="info-item">
               <strong>Company:</strong> <span>Cogwheel Analytics</span>
+            </div>
+            <div class="info-item">
+              <strong>Position:</strong> <span>Senior Software Engineer</span>
+            </div>
+            <div class="info-item">
+              <strong>Specialization:</strong> <span>Angular / JavaScript / Node.js</span>
             </div>
           </div>
         </div>
@@ -446,43 +455,50 @@
         
         <div class="social-qr-grid">
           <!-- Facebook -->
-          <div class="social-qr-card" onclick="openModal('Facebook', 'images/facebook/facebook_qr_tuhin234.png', 'Scan this QR code with your phone camera to follow me on Facebook')">
+          <div class="social-qr-card" onclick="openModal('Facebook', 'assets/images/social/facebook/facebook_qr_tuhin234.png', 'Scan this QR code with your phone camera to follow me on Facebook')">
             <div class="social-qr-image">
-              <img src="images/facebook/facebook_qr_tuhin234.png" alt="Facebook QR Code">
+              <img src="assets/images/social/facebook/facebook_qr_tuhin234.png" alt="Facebook QR Code">
             </div>
             <h3>Facebook</h3>
           </div>
           
           <!-- Instagram -->
-          <div class="social-qr-card" onclick="openModal('Instagram', 'images/instagram/instagram_qr_code.png', 'Scan this QR code with your phone camera to follow me on Instagram')">
+          <div class="social-qr-card" onclick="openModal('Instagram', 'assets/images/social/instagram/insta.png', 'Scan this QR code with your phone camera to follow me on Instagram')">
             <div class="social-qr-image">
-              <img src="images/instagram/instagram_qr_code.png" alt="Instagram QR Code">
+              <img src="assets/images/social/instagram/insta.png" alt="Instagram QR Code">
             </div>
             <h3>Instagram</h3>
           </div>
           
           <!-- LinkedIn -->
-          <div class="social-qr-card" onclick="openModal('LinkedIn', 'images/linkedIn/1765459217671.jpg', 'Scan this QR code with your phone camera to connect with me on LinkedIn')">
+          <div class="social-qr-card" onclick="openModal('LinkedIn', 'assets/images/social/linkedIn/linked.jpg', 'Scan this QR code with your phone camera to connect with me on LinkedIn')">
             <div class="social-qr-image">
-              <img src="images/linkedIn/1765459217671.jpg" alt="LinkedIn QR Code">
+              <img src="assets/images/social/linkedIn/linked.jpg" alt="LinkedIn QR Code">
             </div>
             <h3>LinkedIn</h3>
           </div>
           
           <!-- WeChat -->
-          <div class="social-qr-card" onclick="openModal('WeChat', 'images/weChat/dummy_wechat_qr.png', 'Scan this QR code with WeChat app to add me')">
+          <div class="social-qr-card" onclick="openModal('WeChat', 'assets/images/social/weChat/dummy_wechat_qr.png', 'Scan this QR code with WeChat app to add me')">
             <div class="social-qr-image">
-              <img src="images/weChat/dummy_wechat_qr.png" alt="WeChat QR Code">
+              <img src="assets/images/social/weChat/dummy_wechat_qr.png" alt="WeChat QR Code">
             </div>
             <h3>WeChat</h3>
           </div>
           
           <!-- WhatsApp -->
-          <div class="social-qr-card" onclick="openModal('WhatsApp', 'images/whatsApp/1765460114627.jpg', 'Scan this QR code with WhatsApp to message me directly')">
+          <div class="social-qr-card" onclick="openModal('WhatsApp', 'assets/images/social/whatsApp/whats.jpg', 'Scan this QR code with WhatsApp to message me directly')">
             <div class="social-qr-image">
-              <img src="images/whatsApp/1765460114627.jpg" alt="WhatsApp QR Code">
+              <img src="assets/images/social/whatsApp/whats.jpg" alt="WhatsApp QR Code">
             </div>
             <h3>WhatsApp</h3>
+          </div>
+          <!-- Twitter -->
+          <div class="social-qr-card" onclick="openModal('Twitter', 'assets/images/social/x/qr_x_tauhidul.png', 'Scan this QR code with your phone camera to follow me on Twitter')">
+            <div class="social-qr-image">
+              <img src="assets/images/social/x/qr_x_tauhidul.png" alt="Twitter QR Code">
+            </div>
+            <h3>Twitter</h3>
           </div>
         </div>
       </div>
@@ -502,6 +518,18 @@
         <h3 id="modalTitle"></h3>
         <p id="modalDescription"></p>
         <img id="modalQRImage" src="" alt="QR Code">
+      </div>
+    </div>
+
+    <!-- Modal for CV Display -->
+    <div id="cvModal" class="modal cv-modal" onclick="closeCVModal(event)">
+      <div class="modal-content cv-modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeCVModal()">&times;</button>
+        <h3>My Resume</h3>
+        <div class="cv-actions">
+          <a href="assets/cv/Tauhidul_JavaScript_Angular.pdf" download class="btn btn-download-small">Download PDF</a>
+        </div>
+        <iframe id="cvFrame" src="assets/cv/Tauhidul_JavaScript_Angular.pdf" frameborder="0"></iframe>
       </div>
     </div>
 
@@ -569,8 +597,22 @@
       document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
           closeModal();
+          closeCVModal();
         }
       });
+
+      // CV Modal functions
+      function openCVModal() {
+        const modal = document.getElementById('cvModal');
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeCVModal(event) {
+        const modal = document.getElementById('cvModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
 
       // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
