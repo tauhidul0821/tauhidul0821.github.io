@@ -1,0 +1,288 @@
+{
+  "name": "Ajmot Malitha",
+  "note": "Dadir (Samiron) Bap + Ganda tar cele. Later married Kurban er apon ma.",
+  "children_with_first_wife": {
+    "mother": "Ganda",
+    "children": [
+      {
+        "name": "Jojor Malitha",
+        "children": [
+          {
+            "name": "Cattar",
+            "children": [
+              {
+                "name": "Sopon"
+              },
+              {
+                "name": "Setu"
+              }
+            ]
+          },
+          {
+            "name": "Kuti",
+            "note": "Mathai problem"
+          },
+          {
+            "name": "Rahimon"
+          },
+          {
+            "name": "Kome"
+          },
+          {
+            "name": "Hame"
+          },
+          {
+            "name": "Tame"
+          }
+        ]
+      },
+      {
+        "name": "Samiron",
+        "note": "Amr nanar ma",
+        "spouse": "Babur Ali Malitha",
+        "children": [
+          {
+            "name": "Amulla",
+            "children": [
+              {
+                "name": "Sagori",
+                "children": [
+                  {
+                    "name": "Azmira",
+                    "children": [
+                      {
+                        "name": "Zaira"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Beby"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Harej Malitha",
+            "children": [
+              {
+                "name": "Hapijul",
+                "children": [
+                  {
+                    "name": "Pushpo"
+                  },
+                  {
+                    "name": "Badsha"
+                  },
+                  {
+                    "name": "Raja"
+                  }
+                ]
+              },
+              {
+                "name": "Salema",
+                "children": [
+                  {
+                    "name": "Somrat"
+                  },
+                  {
+                    "name": "LP"
+                  },
+                  {
+                    "name": "Lija"
+                  }
+                ]
+              },
+              {
+                "name": "Maleka",
+                "children": [
+                  {
+                    "name": "Tauhidul",
+                    "children": [
+                      {
+                        "name": "Tahmid"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Muntaj Malitha",
+            "children": [
+              {
+                "name": "Alamin",
+                "children": [
+                  {
+                    "name": "Alpona"
+                  },
+                  {
+                    "name": "Onika"
+                  },
+                  {
+                    "name": "Labib"
+                  }
+                ]
+              },
+              {
+                "name": "Jalamin",
+                "children": [
+                  {
+                    "name": "Naim"
+                  },
+                  {
+                    "name": "Nahid"
+                  },
+                  {
+                    "name": "Nafis"
+                  }
+                ]
+              },
+              {
+                "name": "Amirul",
+                "children": [
+                  {
+                    "name": "Siam"
+                  },
+                  {
+                    "name": "Jisan"
+                  }
+                ]
+              },
+              {
+                "name": "Jiyarul",
+                "children": [
+                  {
+                    "name": "Jiniya"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mojibar",
+            "children": [
+              {
+                "name": "Mintu",
+                "relation": "Mama",
+                "children": [
+                  {
+                    "name": "Hridoy"
+                  },
+                  {
+                    "name": "Samanta"
+                  },
+                  {
+                    "name": "Tahsin"
+                  }
+                ]
+              },
+              {
+                "name": "Arif",
+                "relation": "Mama",
+                "children": [
+                  {
+                    "name": "Riad"
+                  },
+                  {
+                    "name": "Rihan"
+                  }
+                ]
+              },
+              {
+                "name": "Rifat",
+                "relation": "Mama"
+              }
+            ]
+          },
+          {
+            "name": "Suna Malitha",
+            "children": [
+              {
+                "name": "Anic",
+                "relation": "Mama",
+                "children": [
+                  {
+                    "name": "Akhi"
+                  },
+                  {
+                    "name": "Musfika"
+                  },
+                  {
+                    "name": "Arafat"
+                  }
+                ]
+              },
+              {
+                "name": "Munjira",
+                "relation": "Khala",
+                "children": [
+                  {
+                    "name": "Tomal"
+                  },
+                  {
+                    "name": "Towkir"
+                  }
+                ]
+              },
+              {
+                "name": "Rabiya",
+                "relation": "Khala",
+                "children": [
+                  {
+                    "name": "Abid"
+                  },
+                  {
+                    "name": "Raihan"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vanu",
+            "children": [
+              {
+                "name": "Husni",
+                "relation": "Khala"
+              },
+              {
+                "name": "Feddosi"
+              },
+              {
+                "name": "Akta Banu"
+              },
+              {
+                "name": "Suki"
+              },
+              {
+                "name": "Ershad"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Suku"
+      }
+    ]
+  },
+  "children_with_second_wife": {
+    "mother": "Kurban er apon ma",
+    "children": [
+      {
+        "name": "Kurban"
+      },
+      {
+        "name": "Tengra"
+      },
+      {
+        "name": "Apa"
+      },
+      {
+        "name": "Dulal"
+      }
+    ]
+  }
+}
