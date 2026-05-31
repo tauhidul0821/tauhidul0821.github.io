@@ -834,6 +834,7 @@ section h2::after {
   border-radius: 12px;
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
   position: relative;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .family-tree-container::after {
@@ -857,6 +858,17 @@ section h2::after {
 
 .family-tree-container.has-scroll::after {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .family-tree-container::after {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  
+  .family-tree-container.has-scroll::after {
+    opacity: 1; /* Always show on mobile to guide users */
+  }
 }
 
 .tree-root {
@@ -1037,6 +1049,11 @@ section h2::after {
 @media (max-width: 768px) {
   .family-tree-container {
     padding: 1.5rem 0.5rem;
+  }
+  
+  .tree-root {
+    padding: 0 10px; /* Reduce padding on mobile to show more content */
+    min-width: max-content; /* Ensure tree can expand fully */
   }
   
   .tree-node {
