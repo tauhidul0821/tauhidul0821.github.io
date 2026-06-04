@@ -210,13 +210,29 @@ function createTreeNode(person, nodeId, isExpanded = false, stateStore) {
   
   contentDiv.appendChild(nameDiv);
 
-  // Add note if exists (optional - currently not showing to keep it clean)
-  // if (person.note) {
-  //   const noteDiv = document.createElement('div');
-  //   noteDiv.className = 'tree-node-note';
-  //   noteDiv.textContent = person.note;
-  //   contentDiv.appendChild(noteDiv);
-  // }
+  // Add spouse if exists
+  if (person.spouse) {
+    const spouseDiv = document.createElement('div');
+    spouseDiv.className = 'tree-node-spouse';
+    spouseDiv.textContent = `স্বামী/স্ত্রী: ${person.spouse}`;
+    contentDiv.appendChild(spouseDiv);
+  }
+
+  // Add household total if exists
+  if (person.household_total) {
+    const householdDiv = document.createElement('div');
+    householdDiv.className = 'tree-node-household';
+    householdDiv.textContent = `পরিবার: ${person.household_total} জন`;
+    contentDiv.appendChild(householdDiv);
+  }
+
+  // Add note if exists
+  if (person.note) {
+    const noteDiv = document.createElement('div');
+    noteDiv.className = 'tree-node-note';
+    noteDiv.textContent = `📝 ${person.note}`;
+    contentDiv.appendChild(noteDiv);
+  }
 
   nodeDiv.appendChild(contentDiv);
 

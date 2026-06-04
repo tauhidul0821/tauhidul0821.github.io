@@ -927,11 +927,32 @@ section h2::after {
   line-height: 1.4;
 }
 
-.tree-node-note {
-  font-size: 0.8rem;
-  color: #666;
+.tree-node-spouse {
+  font-size: 0.85rem;
+  color: #555;
   margin-top: 4px;
   font-style: italic;
+}
+
+.tree-node-household {
+  font-size: 0.85rem;
+  color: #2c3e50;
+  margin-top: 4px;
+  font-weight: 500;
+  background: rgba(52, 152, 219, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.tree-node-note {
+  font-size: 0.8rem;
+  color: #e67e22;
+  margin-top: 6px;
+  padding: 4px 8px;
+  background: rgba(230, 126, 34, 0.1);
+  border-radius: 4px;
+  border-left: 3px solid #e67e22;
 }
 
 .node-expand-icon {
