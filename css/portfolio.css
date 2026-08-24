@@ -482,6 +482,9 @@ section h2::after {
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .blog-card:hover {
@@ -518,6 +521,182 @@ section h2::after {
 .blog-content p {
   color: #666;
   font-size: 0.95rem;
+}
+
+/* Article Page */
+.article-container {
+  max-width: 800px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #4fc08d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.article-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.article-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.article-body {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+}
+
+.article-source {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #24292f;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-github:hover {
+  background: #4fc08d;
+}
+
+.article-toc {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.article-toc h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.article-toc ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.article-toc a {
+  color: #4fc08d;
+  text-decoration: none;
+}
+
+.article-toc a:hover {
+  text-decoration: underline;
+}
+
+.article-body h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  color: #121314;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.article-body h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.7rem;
+  color: #121314;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 0 0 1rem 1.5rem;
+}
+
+.article-body li {
+  margin-bottom: 0.4rem;
+}
+
+.article-body pre {
+  background: #1e1e2e;
+  color: #f8f8f2;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.article-body pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+.article-body code {
+  font-family: 'Fira Code', Menlo, Consolas, monospace;
+}
+
+.article-body :not(pre) > code {
+  background: rgba(79, 192, 141, 0.1);
+  color: #2f8f68;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.article-body th,
+.article-body td {
+  border: 1px solid #e5e5e5;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+}
+
+.article-body th {
+  background: #f8f9fa;
+}
+
+.article-body hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 2rem 0;
 }
 
 /* Contact Section */

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Understanding TypeScript Generics - Tauhidul Islam</title>
+    <meta name="description" content="A deep dive into TypeScript generics, utility types, and advanced type manipulation." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../images/fav.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="../index.html#home" class="logo">Tauhidul Islam</a>
+        <ul class="nav-menu">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#blog" class="active">Blog</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="article">
+      <div class="container article-container">
+        <a href="../index.html#blog" class="back-link">&larr; Back to Blog</a>
+
+        <div class="article-header">
+          <div class="article-icon">✍️</div>
+          <h1>Understanding TypeScript Generics</h1>
+          <span class="blog-date">December 10, 2025</span>
+        </div>
+
+        <div class="article-source">
+          <a
+            href="https://github.com/tauhidul0821/typescript/blob/master/typeScript.md"
+            target="_blank"
+            rel="noopener"
+            class="btn-github"
+          >
+            🔗 View source on GitHub
+          </a>
+        </div>
+
+        <div class="article-toc">
+          <h4>On this page</h4>
+          <ul>
+            <li><a href="#benefits">Benefits of TypeScript</a></li>
+            <li><a href="#type-manipulation">Key Concepts in Type Manipulation</a></li>
+            <li><a href="#nextjs-best-practices">Best Practices for Types in Next.js</a></li>
+            <li><a href="#generics-utility-types">Generics and Utility Types</a></li>
+            <li><a href="#any-unknown-never">any vs unknown vs never</a></li>
+          </ul>
+        </div>
+
+        <div class="article-body">
+          <p>A deep dive into TypeScript generics and how they can make your code more reusable and type-safe. TypeScript 5.8 beta notes are available on the <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/" target="_blank" rel="noopener">official Microsoft dev blog</a>.</p>
+
+          <h2 id="benefits">Benefits of TypeScript</h2>
+
+          <h3>1. Static Typing</h3>
+          <p>TypeScript provides static type checking, which helps catch type-related errors during development rather than at runtime. It improves code quality and reduces bugs, especially in large codebases.</p>
+
+          <h3>2. Improved Code Readability and Maintainability</h3>
+          <p>Types serve as documentation for your code, making it easier to understand. Explicit types help developers understand data structures and APIs, improving collaboration in teams.</p>
+
+          <h3>3. Enhanced IDE Support</h3>
+          <p>TypeScript enhances code editors (e.g., VSCode) with features like:</p>
+          <ul>
+            <li>IntelliSense (auto-completion)</li>
+            <li>Type inference</li>
+            <li>Code navigation (go-to-definition, find references)</li>
+            <li>Refactoring tools</li>
+          </ul>
+
+          <h3>4. Better Refactoring</h3>
+          <p>With TypeScript's type system, refactoring becomes safer because the compiler can point out areas affected by changes. Large-scale refactors are easier since type errors are immediately visible.</p>
+
+          <h3>5. Early Error Detection</h3>
+          <p>TypeScript detects common errors (e.g., misspelled variables, incorrect function calls) during development, reducing runtime exceptions and leading to more robust applications.</p>
+
+          <h3>6. Supports Modern JavaScript Features</h3>
+          <p>TypeScript supports ESNext features (e.g., async/await, modules, destructuring) and compiles them to older JavaScript versions, allowing developers to use the latest JavaScript features while ensuring compatibility with older environments.</p>
+
+          <h3>7. Type Inference</h3>
+          <p>TypeScript can infer types based on context, reducing the need for explicit type annotations while still providing type safety.</p>
+
+          <h3>8. Enhanced Object-Oriented Programming</h3>
+          <p>TypeScript supports advanced OOP concepts like interfaces, abstract classes, access modifiers (<code>public</code>, <code>private</code>, <code>protected</code>), and generics — helping enforce design patterns and principles in complex applications.</p>
+
+          <h3>9. Better Integration with Libraries</h3>
+          <p>TypeScript offers a vast collection of type definitions for third-party JavaScript libraries (<code>@types</code>). Even if a library is written in plain JavaScript, you can use its types to get strong typing and IDE support.</p>
+
+          <h3>10. Scalable Codebases</h3>
+          <p>As codebases grow, maintaining plain JavaScript becomes harder. TypeScript's type system, modularization features, and tooling help in managing large projects effectively.</p>
+
+          <h3>11. Community and Ecosystem</h3>
+          <p>Strong community support and widespread adoption by major frameworks (React, Angular, Vue, etc.). Many modern frameworks and libraries come with built-in TypeScript support or type definitions.</p>
+
+          <h3>12. Interoperability with JavaScript</h3>
+          <p>TypeScript is a superset of JavaScript, meaning any valid JavaScript is valid TypeScript. You can gradually adopt TypeScript in an existing JavaScript project without rewriting everything.</p>
+
+          <h3>13. Improved Debugging Experience</h3>
+          <p>TypeScript can catch errors before running the code, making debugging faster. The generated JavaScript code is often cleaner and easier to debug.</p>
+
+          <h3>14. Optional Static Typing</h3>
+          <p>While TypeScript enforces types, it also allows dynamic typing, giving flexibility where strict types are unnecessary.</p>
+
+          <h3>Use Cases</h3>
+          <ul>
+            <li><strong>Enterprise Applications</strong>: TypeScript's type safety and maintainability make it ideal for large, complex applications.</li>
+            <li><strong>Open-Source Libraries</strong>: Many popular libraries use TypeScript for better developer experience and reliability.</li>
+            <li><strong>Cross-Platform Apps</strong>: TypeScript is used in frameworks like React Native, Angular, and Ionic to build cross-platform applications.</li>
+          </ul>
+
+          <h2 id="type-manipulation">Key Concepts in Type Manipulation</h2>
+
+          <h3>1. Mapped Types</h3>
+          <p>Mapped types create new types by transforming properties of an existing type.</p>
+          <pre><code>type User = {
+  id: number;
+  name: string;
+  isAdmin: boolean;
+};
+
+// Create a type with all properties optional
+type PartialUser = {
+  [K in keyof User]?: User[K];
+};</code></pre>
+          <p><strong>Explanation</strong>:</p>
+          <ul>
+            <li><code>keyof User</code> extracts the keys of <code>User</code> (<code>'id' | 'name' | 'isAdmin'</code>).</li>
+            <li><code>[K in keyof User]</code> iterates over each key.</li>
+            <li><code>User[K]</code> represents the type of each key.</li>
+          </ul>
+          <p><strong>Built-in Utility Example</strong>:</p>
+          <pre><code>type PartialUser = Partial&lt;User&gt;; // Built-in mapped type</code></pre>
+
+          <h3>2. Keyof Operator</h3>
+          <p><code>keyof</code> extracts the keys of a type as a union of string literals.</p>
+          <pre><code>type User = {
+  id: number;
+  name: string;
+};
+
+type UserKeys = keyof User; // 'id' | 'name'</code></pre>
+          <p>This is useful when you want to create dynamic property access or enforce strict key checks.</p>
+
+          <h3>3. Conditional Types</h3>
+          <p>Conditional types allow defining types based on conditions.</p>
+          <pre><code>type IsString&lt;T&gt; = T extends string ? true : false;
+
+type A = IsString&lt;string&gt;; // true
+type B = IsString&lt;number&gt;; // false</code></pre>
+          <p>Conditional types are useful for creating type-level logic, such as filtering types or enforcing constraints.</p>
+
+          <h3>4. Infer Keyword</h3>
+          <p><code>infer</code> is used within conditional types to extract a part of a type.</p>
+          <pre><code>type ReturnType&lt;T&gt; = T extends (...args: any[]) =&gt; infer R ? R : never;
+
+type MyFunction = () =&gt; number;
+type Result = ReturnType&lt;MyFunction&gt;; // number</code></pre>
+          <p>Here, <code>infer R</code> extracts the return type of a function.</p>
+
+          <h3>5. Utility Types</h3>
+          <p>TypeScript provides built-in utility types that simplify common type manipulations.</p>
+          <ul>
+            <li><code>Partial&lt;T&gt;</code>: Makes all properties of <code>T</code> optional.</li>
+            <li><code>Required&lt;T&gt;</code>: Makes all properties of <code>T</code> required.</li>
+            <li><code>Readonly&lt;T&gt;</code>: Makes all properties of <code>T</code> read-only.</li>
+            <li><code>Pick&lt;T, K&gt;</code>: Picks a subset of properties from <code>T</code>.</li>
+            <li><code>Omit&lt;T, K&gt;</code>: Omits a subset of properties from <code>T</code>.</li>
+          </ul>
+          <pre><code>type User = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+type UserWithoutEmail = Omit&lt;User, "email"&gt;;</code></pre>
+
+          <h3>6. Template Literal Types</h3>
+          <p>You can create string literal types using template literals.</p>
+          <pre><code>type Status = "loading" | "success" | "error";
+type StatusMessage = `Status is ${Status}`;
+
+const message: StatusMessage = "Status is success";</code></pre>
+
+          <h3>7. Recursive Types</h3>
+          <p>Recursive types are types that reference themselves, useful for defining complex structures like trees or nested arrays.</p>
+          <pre><code>type NestedArray&lt;T&gt; = T | NestedArray&lt;T&gt;[];
+
+const example: NestedArray&lt;number&gt; = [1, [2, [3, 4]], 5];</code></pre>
+
+          <h3>Practical Example: Deep Partial</h3>
+          <p>Let's create a utility type <code>DeepPartial&lt;T&gt;</code> that makes all properties and nested properties optional.</p>
+          <pre><code>type DeepPartial&lt;T&gt; = {
+  [K in keyof T]?: T[K] extends object ? DeepPartial&lt;T[K]&gt; : T[K];
+};
+
+type User = {
+  id: number;
+  profile: {
+    name: string;
+    address: {
+      street: string;
+      city: string;
+    };
+  };
+};
+
+type PartialUser = DeepPartial&lt;User&gt;;</code></pre>
+
+          <h3>Use Cases of Type Manipulation</h3>
+          <ul>
+            <li><strong>Dynamic API Responses</strong>: Manipulate API response types based on specific conditions (e.g., partial updates).</li>
+            <li><strong>Form Builders</strong>: Create types for form fields dynamically based on the data model.</li>
+            <li><strong>Data Validation</strong>: Define strict validation types using conditional types and inference.</li>
+          </ul>
+
+          <h2 id="nextjs-best-practices">Best Practices for Adding Types in a Next.js Project</h2>
+          <p>In a Next.js project, TypeScript types can be applied at various levels, such as pages, API routes, components, props, hooks, and more.</p>
+
+          <h3>1. Adding Types to Page Components</h3>
+          <pre><code>// pages/index.tsx
+import { NextPage } from "next";
+
+type HomeProps = {
+  title: string;
+};
+
+const Home: NextPage&lt;HomeProps&gt; = ({ title }) =&gt; {
+  return &lt;h1&gt;{title}&lt;/h1&gt;;
+};
+
+export default Home;</code></pre>
+          <p><strong>Best Practice</strong>: Use <code>NextPage&lt;Props&gt;</code> for page components, define <code>Props</code> as a separate type, and skip the generic argument for pages without props.</p>
+
+          <h3>2. Adding Types to getStaticProps and getServerSideProps</h3>
+          <pre><code>// pages/blog.tsx
+import { GetStaticProps, NextPage } from "next";
+
+type BlogPost = {
+  id: number;
+  title: string;
+};
+
+type BlogProps = {
+  posts: BlogPost[];
+};
+
+export const getStaticProps: GetStaticProps&lt;BlogProps&gt; = async () =&gt; {
+  const posts: BlogPost[] = await fetch("https://api.example.com/posts").then(
+    (res) =&gt; res.json()
+  );
+  return { props: { posts } };
+};
+
+const Blog: NextPage&lt;BlogProps&gt; = ({ posts }) =&gt; (
+  &lt;div&gt;
+    {posts.map((post) =&gt; (
+      &lt;h2 key={post.id}&gt;{post.title}&lt;/h2&gt;
+    ))}
+  &lt;/div&gt;
+);
+
+export default Blog;</code></pre>
+          <p><strong>Best Practice</strong>: Use <code>GetStaticProps&lt;T&gt;</code> or <code>GetServerSideProps&lt;T&gt;</code> to ensure type safety for returned props.</p>
+
+          <h3>3. Adding Types to API Routes</h3>
+          <pre><code>// pages/api/hello.ts
+import { NextApiRequest, NextApiResponse } from "next";
+
+type Data = {
+  message: string;
+};
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse&lt;Data&gt;
+) {
+  res.status(200).json({ message: "Hello World" });
+}</code></pre>
+          <p><strong>Best Practice</strong>: Use <code>NextApiRequest</code> for request typing and <code>NextApiResponse&lt;T&gt;</code> where <code>T</code> is the response data type.</p>
+
+          <h3>4. Adding Types to Custom Hooks</h3>
+          <pre><code>// hooks/useUser.ts
+import { useState } from "react";
+
+type User = {
+  id: number;
+  name: string;
+};
+
+export function useUser() {
+  const [user, setUser] = useState&lt;User | null&gt;(null);
+
+  return { user, setUser };
+}</code></pre>
+          <p><strong>Best Practice</strong>: Always type the state and return values explicitly, and use generics when the hook needs to be reusable.</p>
+
+          <h3>5. Adding Types to Components and Props</h3>
+          <pre><code>// components/Button.tsx
+import React from "react";
+
+type ButtonProps = {
+  label: string;
+  onClick: () =&gt; void;
+  disabled?: boolean;
+};
+
+const Button: React.FC&lt;ButtonProps&gt; = ({ label, onClick, disabled }) =&gt; (
+  &lt;button onClick={onClick} disabled={disabled}&gt;
+    {label}
+  &lt;/button&gt;
+);
+
+export default Button;</code></pre>
+          <p><strong>Best Practice</strong>: Use <code>React.FC&lt;Props&gt;</code> for functional components and define optional props using <code>?</code>.</p>
+
+          <h3>6. Adding Types to Context</h3>
+          <pre><code>// context/AuthContext.tsx
+import React, { createContext, useContext, useState, ReactNode } from "react";
+
+type AuthContextType = {
+  user: string | null;
+  login: (username: string) =&gt; void;
+};
+
+const AuthContext = createContext&lt;AuthContextType | undefined&gt;(undefined);
+
+export const AuthProvider = ({ children }: { children: ReactNode }) =&gt; {
+  const [user, setUser] = useState&lt;string | null&gt;(null);
+
+  const login = (username: string) =&gt; {
+    setUser(username);
+  };
+
+  return (
+    &lt;AuthContext.Provider value={{ user, login }}&gt;
+      {children}
+    &lt;/AuthContext.Provider&gt;
+  );
+};
+
+export const useAuth = () =&gt; {
+  const context = useContext(AuthContext);
+  if (!context) throw new Error("useAuth must be used within an AuthProvider");
+  return context;
+};</code></pre>
+          <p><strong>Best Practice</strong>: Type both the context value and the <code>children</code> prop, and guard <code>useContext</code> to avoid runtime errors.</p>
+
+          <h3>7. Using Utility Types for Props</h3>
+          <pre><code>type User = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+// Pick only id and name for a component
+type UserCardProps = Pick&lt;User, "id" | "name"&gt;;
+
+const UserCard: React.FC&lt;UserCardProps&gt; = ({ id, name }) =&gt; (
+  &lt;div&gt;
+    &lt;p&gt;ID: {id}&lt;/p&gt;
+    &lt;p&gt;Name: {name}&lt;/p&gt;
+  &lt;/div&gt;
+);</code></pre>
+
+          <h3>8. Adding Types for External Libraries</h3>
+          <pre><code>// types/custom-lib.d.ts
+declare module "custom-lib" {
+  export function customFunction(param: string): boolean;
+}</code></pre>
+
+          <h3>9. Adding Types to Configuration Files</h3>
+          <pre><code>// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+};
+
+module.exports = nextConfig;</code></pre>
+
+          <h3>General Best Practices</h3>
+          <ul>
+            <li><strong>Enable Strict Mode</strong> — turn on <code>strict</code> in <code>tsconfig.json</code> to enforce strict type checking.</li>
+            <li><strong>Use <code>interface</code> vs <code>type</code> appropriately</strong> — <code>interface</code> for object shapes that might be extended, <code>type</code> for unions and utility types.</li>
+            <li><strong>Leverage Generics</strong> — for reusable, type-safe components, hooks, and functions.</li>
+            <li><strong>Avoid <code>any</code></strong> — prefer <code>unknown</code> when the type is not yet known.</li>
+          </ul>
+          <pre><code>{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  }
+}</code></pre>
+
+          <h2 id="generics-utility-types">TypeScript Generics and Utility Types</h2>
+          <p>TypeScript provides powerful features like <strong>Generics</strong> and <strong>Utility Types</strong> to create flexible, reusable, and type-safe code.</p>
+
+          <h3>Generics</h3>
+          <p>Generics allow you to define reusable code with type parameters, making your code flexible and type-safe.</p>
+          <pre><code>function identity&lt;T&gt;(value: T): T {
+  return value;
+}
+
+console.log(identity&lt;string&gt;("Hello")); // Output: Hello
+console.log(identity&lt;number&gt;(42));      // Output: 42</code></pre>
+
+          <h3>Generic Functions</h3>
+          <pre><code>function getArray&lt;T&gt;(items: T[]): T[] {
+  return new Array&lt;T&gt;().concat(items);
+}
+
+let numArray = getArray&lt;number&gt;([1, 2, 3]);
+let strArray = getArray&lt;string&gt;(["A", "B", "C"]);</code></pre>
+
+          <h3>Generic Interfaces</h3>
+          <pre><code>interface KeyValuePair&lt;K, V&gt; {
+  key: K;
+  value: V;
+}
+
+let obj: KeyValuePair&lt;string, number&gt; = { key: "Age", value: 30 };</code></pre>
+
+          <h3>Generic Classes</h3>
+          <pre><code>class Box&lt;T&gt; {
+  private _value: T;
+
+  constructor(value: T) {
+    this._value = value;
+  }
+
+  getValue(): T {
+    return this._value;
+  }
+}
+
+let numberBox = new Box&lt;number&gt;(100);
+console.log(numberBox.getValue()); // Output: 100</code></pre>
+
+          <h3>Generic Constraints</h3>
+          <pre><code>interface Lengthwise {
+  length: number;
+}
+
+function logLength&lt;T extends Lengthwise&gt;(item: T): void {
+  console.log(item.length);
+}
+
+logLength("Hello");   // Valid
+logLength([1, 2, 3]); // Valid
+// logLength(10);      // ❌ Error: number does not have length</code></pre>
+
+          <h3><code>Record</code> Utility Type</h3>
+          <p>The <code>Record</code> type allows you to create an object type with specific keys and values.</p>
+          <pre><code>Record&lt;Keys, Type&gt;</code></pre>
+          <ul>
+            <li><code>Keys</code>: A union of keys that the object will have.</li>
+            <li><code>Type</code>: The type of the values corresponding to those keys.</li>
+          </ul>
+          <pre><code>type RolePermissions = Record&lt;"admin" | "editor" | "viewer", boolean&gt;;
+
+const permissions: RolePermissions = {
+  admin: true,
+  editor: false,
+  viewer: true,
+};</code></pre>
+
+          <h3>Other Utility Types</h3>
+
+          <p><strong>1. <code>Partial&lt;T&gt;</code></strong> — makes all properties optional:</p>
+          <pre><code>type User = { name: string; age: number };
+const partialUser: Partial&lt;User&gt; = { name: "Alice" };</code></pre>
+
+          <p><strong>2. <code>Readonly&lt;T&gt;</code></strong> — makes all properties read-only:</p>
+          <pre><code>type User = { name: string; age: number };
+const readonlyUser: Readonly&lt;User&gt; = { name: "Alice", age: 25 };
+// readonlyUser.name = "Bob"; // ❌ Error</code></pre>
+
+          <p><strong>3. <code>Pick&lt;T, Keys&gt;</code></strong> — creates a type by picking specific keys from <code>T</code>:</p>
+          <pre><code>type User = { name: string; age: number; email: string };
+
+type UserPreview = Pick&lt;User, "name" | "email"&gt;;
+const userPreview: UserPreview = { name: "Alice", email: "alice@example.com" };</code></pre>
+
+          <p><strong>4. <code>Omit&lt;T, Keys&gt;</code></strong> — creates a type by omitting specific keys from <code>T</code>:</p>
+          <pre><code>type User = { name: string; age: number; email: string };
+
+type WithoutEmail = Omit&lt;User, "email"&gt;;
+const user: WithoutEmail = { name: "Alice", age: 25 };</code></pre>
+
+          <p><strong>5. <code>Required&lt;T&gt;</code></strong> — makes all properties required:</p>
+          <pre><code>type User = { name?: string; age?: number };
+const user: Required&lt;User&gt; = { name: "Alice", age: 25 };</code></pre>
+
+          <p><strong>6. <code>ReturnType&lt;T&gt;</code></strong> — extracts the return type of a function:</p>
+          <pre><code>function getUser() {
+  return { name: "Alice", age: 25 };
+}
+
+type User = ReturnType&lt;typeof getUser&gt;; // { name: string; age: number }</code></pre>
+
+          <p><strong>7. <code>Exclude&lt;T, U&gt;</code></strong> — excludes types from <code>T</code> that are assignable to <code>U</code>:</p>
+          <pre><code>type Status = "active" | "inactive" | "archived";
+type ActiveStatus = Exclude&lt;Status, "archived"&gt;;</code></pre>
+
+          <p><strong>8. <code>Extract&lt;T, U&gt;</code></strong> — extracts types from <code>T</code> that are assignable to <code>U</code>:</p>
+          <pre><code>type Status = "active" | "inactive" | "archived";
+type OnlyArchived = Extract&lt;Status, "archived"&gt;;</code></pre>
+
+          <p><strong>9. <code>NonNullable&lt;T&gt;</code></strong> — removes <code>null</code> and <code>undefined</code> from <code>T</code>:</p>
+          <pre><code>type User = string | null | undefined;
+type NonNullUser = NonNullable&lt;User&gt;; // string</code></pre>
+
+          <p><strong>10. <code>Parameters&lt;T&gt;</code></strong> — gets the parameter types of a function type as a tuple:</p>
+          <pre><code>type Func = (name: string, age: number) =&gt; void;
+type Params = Parameters&lt;Func&gt;; // [string, number]</code></pre>
+
+          <p>Generics and utility types make TypeScript a robust and flexible language for building scalable applications. By mastering these tools, you can create reusable, type-safe, and clean code.</p>
+
+          <h2 id="any-unknown-never">Difference Between <code>any</code>, <code>unknown</code>, and <code>never</code></h2>
+          <p>These are three special types that serve very different purposes:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Meaning</th>
+                <th>Usage</th>
+                <th>Safety Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>any</code></td>
+                <td>Can be anything; disables type checking.</td>
+                <td>Used when you don't care about type safety.</td>
+                <td>Unsafe ❌</td>
+              </tr>
+              <tr>
+                <td><code>unknown</code></td>
+                <td>Can be anything, but must be type-checked before use.</td>
+                <td>Used when dealing with uncertain types.</td>
+                <td>Safer than <code>any</code> ✅</td>
+              </tr>
+              <tr>
+                <td><code>never</code></td>
+                <td>Represents values that never occur.</td>
+                <td>Functions that never return, or exhaustive checks.</td>
+                <td>Strictest ✅✅</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>1️⃣ <code>any</code> (No Type Safety)</h3>
+          <p>The <code>any</code> type allows anything and effectively disables TypeScript's type checking.</p>
+          <pre><code>let value: any;
+
+value = 42;          // ✅ Allowed
+value = "hello";     // ✅ Allowed
+value = true;        // ✅ Allowed
+
+// You can do anything with `any`, but it's dangerous
+value.toUpperCase(); // ✅ No error (even if value is a number)</code></pre>
+          <p><strong>Drawbacks</strong>: no compile-time safety, can lead to unexpected runtime errors — TypeScript does not check what you're doing with <code>any</code>.</p>
+
+          <h3>2️⃣ <code>unknown</code> (Safer Alternative to <code>any</code>)</h3>
+          <p>The <code>unknown</code> type accepts any value, but unlike <code>any</code>, you must type-check it before using it.</p>
+          <pre><code>let value: unknown;
+
+value = 42;          // ✅ Allowed
+value = "hello";     // ✅ Allowed
+
+// ❌ Error: TypeScript doesn't know the actual type
+// value.toUpperCase();
+
+// ✅ Must type-check first
+if (typeof value === "string") {
+  console.log(value.toUpperCase()); // ✅ Safe
+}</code></pre>
+          <p>Using <code>unknown</code> prevents unsafe operations, encourages type-checking before use, and ensures better type safety in applications.</p>
+
+          <h3>3️⃣ <code>never</code> (Impossible Values)</h3>
+          <p>The <code>never</code> type is used for values that never occur. It usually appears in functions that throw errors or enter infinite loops.</p>
+          <pre><code>function throwError(message: string): never {
+  throw new Error(message);
+}
+
+function infiniteLoop(): never {
+  while (true) {
+    console.log("Running forever...");
+  }
+}</code></pre>
+          <p><strong>Exhaustive type checking</strong> in a <code>switch</code> statement:</p>
+          <pre><code>type Shape = "circle" | "square";
+
+function getShape(shape: Shape): string {
+  switch (shape) {
+    case "circle":
+      return "It's a circle!";
+    case "square":
+      return "It's a square!";
+    default:
+      const _exhaustiveCheck: never = shape; // Ensures all cases are handled
+      throw new Error(`Unexpected shape: ${_exhaustiveCheck}`);
+  }
+}</code></pre>
+          <p>If a new shape is added (<code>"triangle"</code>), TypeScript will force you to update this function.</p>
+
+          <h3>Key Differences Summarized</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th><code>any</code></th>
+                <th><code>unknown</code></th>
+                <th><code>never</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Accepts any value?</td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>❌ No</td>
+              </tr>
+              <tr>
+                <td>Type-check required?</td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+                <td>✅ N/A</td>
+              </tr>
+              <tr>
+                <td>Safe to use?</td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+              </tr>
+              <tr>
+                <td>Used in function return types?</td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>✅ Yes, but only when the function never returns</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><strong>When should you use each?</strong></p>
+          <ul>
+            <li>✅ Use <code>any</code> when you don't care about type safety (e.g., third-party libraries).</li>
+            <li>✅ Use <code>unknown</code> when you receive unknown data (e.g., API responses) but want type safety.</li>
+            <li>✅ Use <code>never</code> for functions that never return, or for exhaustive type checking.</li>
+          </ul>
+        </div>
+
+        <a href="../index.html#blog" class="back-link">&larr; Back to Blog</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Tauhidul Islam. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
