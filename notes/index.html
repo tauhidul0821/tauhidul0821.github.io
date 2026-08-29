@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Notes - Tauhidul Islam</title>
+    <meta name="description" content="Personal learning notes from Tauhidul Islam - things he's currently learning, kept in one place to revisit from anywhere." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../images/fav.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="../index.html#home" class="logo">Tauhidul Islam</a>
+        <ul class="nav-menu">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../notes/index.html" class="active">Notes</a></li>
+          <li><a href="../index.html#blog">Blog</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="notes-list" style="padding-top: 140px;">
+      <div class="container">
+        <h2>Notes</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.05rem;">
+          A running scratchpad of things I'm learning right now, kept here so I can pull it up from any device.
+        </p>
+
+        <div class="blog-grid">
+          <a href="deutsch-language.html" class="blog-card">
+            <div class="blog-image">🇩🇪</div>
+            <div class="blog-content">
+              <h3>Deutsch (German) Language</h3>
+              <span class="blog-date">Updated August 29, 2026</span>
+              <p>Alphabet, pronunciation, numbers and personal pronouns - my running notes while learning German.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Tauhidul Islam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

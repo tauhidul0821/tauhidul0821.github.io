@@ -699,6 +699,18 @@ section h2::after {
   margin: 2rem 0;
 }
 
+.note-screenshot {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  cursor: zoom-in;
+}
+
 /* Contact Section */
 #contact {
   background: #f8f9fa;
