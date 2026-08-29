@@ -701,13 +701,13 @@ section h2::after {
 
 .note-screenshot {
   display: block;
-  width: 100%;
+  width: 560px;
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   border: 1px solid #e5e5e5;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem;
   cursor: zoom-in;
 }
 
