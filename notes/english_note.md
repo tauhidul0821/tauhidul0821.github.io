@@ -160,6 +160,119 @@ if subject is infintive then subject is singular.
 
 correct answer : is.
 
+
+Here is the important list:
+
+| Singular verb | Plural verb  |
+| ------------- | ------------ |
+| **is**        | **are**      |
+| **was**       | **were**     |
+| **has**       | **have**     |
+| **does**      | **do**       |
+| **works**     | **work**     |
+| **lives**     | **live**     |
+| **goes**      | **go**       |
+| **comes**     | **come**     |
+| **likes**     | **like**     |
+| **needs**     | **need**     |
+| **wants**     | **want**     |
+| **makes**     | **make**     |
+| **takes**     | **take**     |
+| **gives**     | **give**     |
+| **gets**      | **get**      |
+| **uses**      | **use**      |
+| **finds**     | **find**     |
+| **knows**     | **know**     |
+| **thinks**    | **think**    |
+| **says**      | **say**      |
+| **tells**     | **tell**     |
+| **comes**     | **come**     |
+| **looks**     | **look**     |
+| **seems**     | **seem**     |
+| **becomes**   | **become**   |
+| **helps**     | **help**     |
+| **provides**  | **provide**  |
+| **shows**     | **show**     |
+| **means**     | **mean**     |
+| **includes**  | **include**  |
+| **contains**  | **contain**  |
+| **requires**  | **require**  |
+| **allows**    | **allow**    |
+| **offers**    | **offer**    |
+| **creates**   | **create**   |
+| **causes**    | **cause**    |
+| **increases** | **increase** |
+| **decreases** | **decrease** |
+| **changes**   | **change**   |
+| **improves**  | **improve**  |
+| **reduces**   | **reduce**   |
+| **affects**   | **affect**   |
+| **depends**   | **depend**   |
+| **appears**   | **appear**   |
+| **occurs**    | **occur**    |
+| **happens**   | **happen**   |
+| **exists**    | **exist**    |
+| **plays**     | **play**     |
+| **tries**     | **try**      |
+| **studies**   | **study**    |
+| **carries**   | **carry**    |
+
+### Important special cases
+
+These **do not change** between singular and plural:
+
+| Singular   | Plural     |
+| ---------- | ---------- |
+| **had**    | **had**    |
+| **did**    | **did**    |
+| **could**  | **could**  |
+| **would**  | **would**  |
+| **should** | **should** |
+| **might**  | **might**  |
+| **must**   | **must**   |
+| **can**    | **can**    |
+| **will**   | **will**   |
+| **may**    | **may**    |
+
+### The main pattern to memorize
+
+For **present simple normal verbs**:
+
+**Singular:** `verb + s/es`
+**Plural:** `base verb`
+
+Examples:
+
+* works → work
+* goes → go
+* needs → need
+* studies → study
+* watches → watch
+* tries → try
+
+But the three big irregular ones are:
+
+**is → are**
+**has → have**
+**does → do**
+
+And in the past:
+
+**was → were**
+**had → had**
+**did → did**
+
+That's the core Subject–Verb Agreement list you need.
+
+
+
+
+
+
+
+
+
+
 ---
 
 ## 4. Articles
