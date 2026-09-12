@@ -6,7 +6,7 @@
     <title>Understanding TypeScript Generics - Tauhidul Islam</title>
     <meta name="description" content="A deep dive into TypeScript generics, utility types, and advanced type manipulation." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="../images/fav.png" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap"
       rel="stylesheet"
@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../css/portfolio.css" />
   </head>
   <body>
+    <button id="backToTop" class="back-to-top" aria-label="Scroll to top" title="Back to top">&uarr;</button>
+
     <!-- Navigation -->
     <nav class="navbar">
       <div class="container nav-container">
@@ -671,5 +673,19 @@ function getShape(shape: Shape): string {
         <p>&copy; 2026 Tauhidul Islam. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
