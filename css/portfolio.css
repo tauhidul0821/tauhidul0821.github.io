@@ -699,6 +699,18 @@ section h2::after {
   margin: 2rem 0;
 }
 
+.quran-arabic {
+  font-family: 'Traditional Arabic', 'Scheherazade New', 'Amiri', 'Arial', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4;
+  text-align: right;
+  background: #f8f9fa;
+  border-right: 4px solid #4fc08d;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
 .note-screenshot {
   display: block;
   width: 560px;

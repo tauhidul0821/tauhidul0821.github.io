@@ -1,3 +1,8 @@
+those are important link and materials for German language 
+book 1. https://online.fliphtml5.com/lmajd/tbdc/#p=26
+
+
+
 Absolutely. If your goal is **Germany + study/work + eventually PR/citizenship**, it is useful to understand A1 and A2 as a progression rather than just a list of grammar topics.
 
 ## 🇩🇪 German A1 vs A2 — the big picture
@@ -847,3 +852,341 @@ For example:
 That's the progression you should aim for.
 
 If your ultimate goal is **working and settling in Germany**, I'd recommend **A1 → A2 → B1**, rather than stopping at A2. A2 is useful for daily survival, but **B1 is where your independence starts becoming much stronger**.
+
+
+
+Absolutely. If you are starting **German from zero**, I’d structure the 30 days so that you learn **speaking + listening + vocabulary + grammar together**, rather than spending all your time on grammar.
+
+### 🇩🇪 Your 30-Day German A1 Plan
+
+**Recommended daily time:** 60–90 minutes
+**Target after 30 days:** You should be able to introduce yourself, handle basic everyday conversations, understand common phrases, ask/answer simple questions, and have a foundation for continuing toward A1 exam level.
+
+**Main book:** *Schritte plus Neu A1* or *Menschen A1*
+You don't have to buy both.
+
+---
+
+## Week 1 — Start from Zero 🇩🇪
+
+| Day   | Topic                    | What to learn                                                         |
+| ----- | ------------------------ | --------------------------------------------------------------------- |
+| **1** | Greetings                | Hallo, Guten Morgen, Guten Tag, Guten Abend, Tschüss, Auf Wiedersehen |
+| **2** | Introducing yourself     | Ich heiße…, Ich bin…, Mein Name ist…, Ich komme aus…                  |
+| **3** | Alphabet & pronunciation | German alphabet, ä/ö/ü, ß, basic pronunciation                        |
+| **4** | Numbers                  | 0–100, phone numbers, prices                                          |
+| **5** | Personal information     | Name, age, country, city, job, language                               |
+| **6** | Pronouns                 | ich, du, er, sie, es, wir, ihr, sie/Sie                               |
+| **7** | Review                   | Review Days 1–6 + speaking practice                                   |
+
+### 🎯 By Day 7 you should be able to say:
+
+> Hallo! Ich heiße Tauhidul.
+> Ich komme aus Bangladesch.
+> Ich wohne in …
+> Ich bin … Jahre alt.
+> Ich bin Softwareentwickler.
+> Ich spreche Bangla und Englisch.
+> Ich lerne Deutsch.
+
+Don't worry if it feels slow. **Speaking these simple sentences aloud is very important.**
+
+---
+
+# Week 2 — Basic German Grammar 🧩
+
+| Day    | Topic              | What to learn                             |
+| ------ | ------------------ | ----------------------------------------- |
+| **8**  | Verb *sein*        | ich bin, du bist, er ist, wir sind…       |
+| **9**  | Verb *haben*       | ich habe, du hast, er hat…                |
+| **10** | Regular verbs      | machen, lernen, wohnen, arbeiten, spielen |
+| **11** | Sentence structure | Ich lerne Deutsch. / Ich wohne in Dhaka.  |
+| **12** | Questions          | Wer? Was? Wo? Woher? Wie? Wann? Warum?    |
+| **13** | Yes/no questions   | Bist du…? Hast du…? Lernst du…?           |
+| **14** | Review             | Grammar + speaking + listening            |
+
+### Important concept
+
+German has a very important rule:
+
+**Subject + Verb + Object**
+
+> Ich **lerne** Deutsch.
+> I **learn** German.
+
+> Ich **wohne** in Deutschland.
+> I **live** in Germany.
+
+But questions can change the order:
+
+> **Wo wohnst du?**
+> Where do you live?
+
+> **Lernst du Deutsch?**
+> Are you learning German?
+
+---
+
+# Week 3 — Everyday German 🏠
+
+| Day    | Topic         | Vocabulary                                      |
+| ------ | ------------- | ----------------------------------------------- |
+| **15** | Family        | Vater, Mutter, Bruder, Schwester, Sohn, Tochter |
+| **16** | Food & drinks | Wasser, Kaffee, Brot, Reis, Fleisch, Gemüse     |
+| **17** | Shopping      | kaufen, bezahlen, Euro, teuer, billig           |
+| **18** | Time & dates  | Uhr, heute, morgen, Montag, Januar              |
+| **19** | Daily routine | aufstehen, arbeiten, essen, schlafen            |
+| **20** | Home          | Haus, Wohnung, Zimmer, Küche, Bad               |
+| **21** | Review        | Make conversations using Days 15–20             |
+
+### Example conversation
+
+**A:** Was möchtest du?
+**B:** Ich möchte einen Kaffee, bitte.
+
+**A:** Wie viel kostet das?
+**B:** Das kostet fünf Euro.
+
+**A:** Danke.
+**B:** Bitte.
+
+---
+
+# Week 4 — Real-Life German 🇩🇪
+
+This week is particularly useful if you're learning German because you want to **live/travel/work in Germany**.
+
+| Day    | Topic                  | What to learn                                     |
+| ------ | ---------------------- | ------------------------------------------------- |
+| **22** | Transport              | Bus, Zug, Bahnhof, Flughafen, Ticket              |
+| **23** | Directions             | links, rechts, geradeaus, hier, dort              |
+| **24** | Doctor/pharmacy        | Arzt, Apotheke, Termin, Schmerzen                 |
+| **25** | Work                   | Arbeit, Büro, Kollege, Chef, Pause                |
+| **26** | Appointments           | Termin machen, Uhrzeit, Datum                     |
+| **27** | Restaurant             | bestellen, Rechnung, Speisekarte                  |
+| **28** | German A1 conversation | Introductions + shopping + transport + restaurant |
+| **29** | A1 test day            | Listening, reading, writing, speaking             |
+| **30** | Final review           | Full A1 self-test + speaking                      |
+
+---
+
+# 📚 What to study every day
+
+Don't just read the textbook. Use this **daily 75-minute routine**:
+
+### ⏱️ 15 min — Vocabulary
+
+Learn **10–15 new words**.
+
+For example:
+
+| German     | English | Bangla  |
+| ---------- | ------- | ------- |
+| das Haus   | house   | বাড়ি    |
+| das Wasser | water   | পানি    |
+| der Mann   | man     | পুরুষ   |
+| die Frau   | woman   | মহিলা   |
+| essen      | eat     | খাওয়া   |
+| trinken    | drink   | পান করা |
+| lernen     | learn   | শেখা    |
+
+**Important:** Learn the article together with the noun.
+
+❌ Haus
+✅ **das Haus**
+
+❌ Tisch
+✅ **der Tisch**
+
+❌ Wohnung
+✅ **die Wohnung**
+
+---
+
+### ⏱️ 20 min — Grammar
+
+Study only **one small grammar concept per day**.
+
+Don't try to memorize the entire German grammar system.
+
+For example:
+
+**sein**
+
+> Ich bin
+> Du bist
+> Er ist
+> Sie ist
+> Wir sind
+> Ihr seid
+> Sie sind
+
+Then make sentences:
+
+> Ich bin müde.
+> Ich bin Student.
+> Ich bin aus Bangladesch.
+
+---
+
+### ⏱️ 15 min — Listening 🎧
+
+Listen to the same short German dialogue several times.
+
+**First:** Just listen.
+
+**Second:** Read the German text.
+
+**Third:** Listen again.
+
+**Fourth:** Repeat aloud.
+
+This is called **shadowing**, and it's extremely useful for pronunciation.
+
+---
+
+### ⏱️ 15 min — Speaking 🗣️
+
+Speak aloud, even if you're alone.
+
+For example:
+
+> Hallo!
+> Ich heiße Tauhidul.
+> Ich komme aus Bangladesch.
+> Ich wohne in Dhaka.
+> Ich arbeite als Softwareentwickler.
+> Ich lerne Deutsch.
+
+Try to speak **without looking at the text**.
+
+---
+
+### ⏱️ 10 min — Writing ✍️
+
+Write 5–10 simple sentences.
+
+For example:
+
+> Ich heiße Tauhidul.
+> Ich komme aus Bangladesch.
+> Ich wohne in Dhaka.
+> Ich lerne Deutsch.
+> Ich arbeite heute.
+
+---
+
+# 🧠 The most important A1 grammar
+
+By the end of these 30 days, focus on mastering these:
+
+### 1. Personal pronouns
+
+**ich** — I
+**du** — you
+**er** — he
+**sie** — she
+**es** — it
+**wir** — we
+**ihr** — you plural
+**sie** — they
+**Sie** — you formal
+
+### 2. *sein* — to be
+
+> Ich bin
+> Du bist
+> Er/Sie ist
+> Wir sind
+> Ihr seid
+> Sie sind
+
+### 3. *haben* — to have
+
+> Ich habe
+> Du hast
+> Er/Sie hat
+> Wir haben
+> Ihr habt
+> Sie haben
+
+### 4. Articles
+
+Learn:
+
+**der** — masculine
+**die** — feminine
+**das** — neuter
+
+And later:
+
+**die** — plural
+
+### 5. Basic verb conjugation
+
+Example: **lernen**
+
+> ich lerne
+> du lernst
+> er lernt
+> wir lernen
+> ihr lernt
+> sie lernen
+
+### 6. Question words
+
+> **Wer?** — Who?
+> **Was?** — What?
+> **Wo?** — Where?
+> **Woher?** — Where from?
+> **Wohin?** — Where to?
+> **Wie?** — How?
+> **Wann?** — When?
+> **Warum?** — Why?
+> **Wie viel?** — How much?
+
+---
+
+# 🇩🇪 Your Day-30 target
+
+At the end of the month, try to have a conversation like this **without reading**:
+
+**A:** Guten Tag! Wie heißen Sie?
+
+**B:** Guten Tag! Ich heiße Tauhidul.
+
+**A:** Woher kommen Sie?
+
+**B:** Ich komme aus Bangladesch.
+
+**A:** Wo wohnen Sie?
+
+**B:** Ich wohne in Dhaka.
+
+**A:** Was machen Sie beruflich?
+
+**B:** Ich bin Softwareentwickler.
+
+**A:** Sprechen Sie Deutsch?
+
+**B:** Ein bisschen. Ich lerne Deutsch.
+
+**A:** Warum lernen Sie Deutsch?
+
+**B:** Ich möchte in Deutschland leben und arbeiten.
+
+That's a very good **A1-level foundation**.
+
+---
+
+## ⭐ One important recommendation
+
+Since you're starting from the beginning, **don't try to learn 50–100 words every day**. You'll forget most of them.
+
+Instead:
+
+**10–15 words/day × 30 days = 300–450 words**
+
+If you can **recognize and actually use** those 300–450 words, that's much more valuable than memorizing 1,500 words without being able to speak.
+
+And from now on, I can also teach you **Day 1 → Day 30 step-by-step**, rather than giving you everything at once. For example, you can simply say **"Start Day 1"**, and I'll give you the Day 1 lesson with **German + English + Bangla meaning + pronunciation + exercises + speaking practice**.
