@@ -4,6 +4,21 @@ those are important link and materials for German language
 2. https://www.facebook.com/wilearningcenter/reels/.
 3. https://www.facebook.com/mtlearnlanguages/reels/
 
+# youtube link
+1. Learn German with anja, link: https://www.youtube.com/@LearnGermanwithAnja
+2. hallo deutschschule, link: https://www.youtube.com/@hallodeutschschule
+3. benjamin- der deutschlehrer, link: https://www.youtube.com/@BenjaminDerDeutschlehrer
+4. spring german, link: https://www.youtube.com/@SpringGerman
+5. learn german with lengura , https://www.youtube.com/@lengura
+6. easy german, https://www.youtube.com/@EasyGerman
+7. judi aegi , https://www.youtube.com/@judiaegi17
+8. deutch schule, https://www.youtube.com/watch?v=ql7J-srh6iA&list=PLvGPylmSp7lo4_Agu_AmCxPn8u-mhrJNt
+9. dein sprachcoach, https://www.youtube.com/@DeinSprachcoach
+10. feli from germany, https://www.youtube.com/@FelifromGermany
+11. get germanized, https://www.youtube.com/@GetGermanized
+12. dw news, https://www.youtube.com/@dwnews
+13. mr wissen2go,  https://www.youtube.com/@MrWissen2go
+
 
 # all facebook pages
 1. https://www.facebook.com/osmangoni.iiuc
