@@ -28,6 +28,26 @@ those are important link and materials for German language
 5. https://www.facebook.com/profile.php?id=61591116587172
 6. https://www.facebook.com/Deutschify.de
 7. https://www.facebook.com/redwan.zim
+8. https://web.facebook.com/YourGermanTeacher365/reels/
+9. https://web.facebook.com/profile.php?id=100089852919663&sk=reels_tab&_rdc=1&_rdr#
+10. https://web.facebook.com/armanfromgerman/reels/
+11. https://web.facebook.com/nikhhiil/reels/
+12. https://web.facebook.com/profile.php?id=100008239116683&sk=reels_tab&_rdc=1&_rdr#
+13. https://web.facebook.com/profile.php?id=61590537452970&sk=reels_tab&_rdc=1&_rdr#
+14. https://web.facebook.com/edpeople/reels/
+15. https://web.facebook.com/profile.php?id=61593488317694&sk=reels_tab&_rdc=1&_rdr#
+16. https://web.facebook.com/profile.php?id=100064878334785&sk=reels_tab&_rdc=1&_rdr#
+17. https://web.facebook.com/LearnGermanWithFida/reels/
+18. https://web.facebook.com/dewithnative/reels/
+19. https://web.facebook.com/hamzaMalik0293/reels/
+20. 
+
+Start learning German for FREE with these amazing resources! 📚💻
+📚 1. DW Learn German , 🎥 Free lessons from A1 to C1 with videos, exercises & complete courses.
+🎓 2. Goethe-Institut, 📝 Free exercises, vocabulary practice & useful German learning materials.
+🎧 3. Easy German , 🗣️ Learn real-life German through street interviews, videos & subtitles.
+📖 4. VHS Lernportal, 💻 Free German courses, especially helpful for beginners & integration.
+✍️ 5. Lingolia Deutsch, 📚 Easy grammar explanations + practice exercises to improve your German.
 
 
 
