@@ -5,6 +5,17 @@ those are important link and materials for German language
 3. https://www.facebook.com/mtlearnlanguages/reels/
 
 
+# all facebook pages
+1. https://www.facebook.com/osmangoni.iiuc
+2. https://www.facebook.com/profile.php?id=61571095697014
+3. https://www.facebook.com/maherban.milton
+4. https://www.facebook.com/guideline2germany
+5. https://www.facebook.com/profile.php?id=61591116587172
+6. https://www.facebook.com/Deutschify.de
+7. https://www.facebook.com/redwan.zim
+
+
+
 Absolutely. If your goal is **Germany + study/work + eventually PR/citizenship**, it is useful to understand A1 and A2 as a progression rather than just a list of grammar topics.
 
 ## 🇩🇪 German A1 vs A2 — the big picture
