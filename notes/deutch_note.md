@@ -1,6 +1,8 @@
 those are important link and materials for German language 
-book 1. https://online.fliphtml5.com/lmajd/tbdc/#p=26
-
+### important link
+1. https://online.fliphtml5.com/lmajd/tbdc/#p=26
+2. https://www.facebook.com/wilearningcenter/reels/.
+3. https://www.facebook.com/mtlearnlanguages/reels/
 
 
 Absolutely. If your goal is **Germany + study/work + eventually PR/citizenship**, it is useful to understand A1 and A2 as a progression rather than just a list of grammar topics.
