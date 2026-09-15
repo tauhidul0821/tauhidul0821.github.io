@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Python & FastAPI Notes - Tauhidul Islam</title>
+    <meta name="description" content="Personal notes while learning Python and FastAPI - following the Udemy 'FastAPI - The Complete Course' outline step by step." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+  </head>
+  <body>
+    <button id="backToTop" class="back-to-top" aria-label="Scroll to top" title="Back to top">&uarr;</button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="../index.html#home" class="logo">Tauhidul Islam</a>
+        <ul class="nav-menu">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../notes/index.html" class="active">Notes</a></li>
+          <li><a href="../index.html#blog">Blog</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="article" style="padding-top: 140px;">
+      <div class="container article-container">
+        <a href="index.html" class="back-link">&larr; Back to Notes</a>
+
+        <div class="article-header">
+          <div class="article-icon">🐍</div>
+          <h1>Python & FastAPI Notes</h1>
+          <span class="blog-date">Started September 15, 2026 &middot; updated as I go through the course</span>
+        </div>
+
+        <div class="article-toc">
+          <h4>On this page</h4>
+          <ul>
+            <li><a href="#resources">Links &amp; Resources</a></li>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#python-refresher">2. Python Installation &amp; Refresher</a></li>
+            <li><a href="#fastapi-overview">3. FastAPI Overview</a></li>
+            <li><a href="#fastapi-setup">4. FastAPI Setup &amp; Installation</a></li>
+            <li><a href="#project-1">5. Project 1 &ndash; FastAPI Request Method Logic</a></li>
+            <li><a href="#project-2">6. Project 2 &ndash; Move Fast with FastAPI</a></li>
+            <li><a href="#project-3">7. Project 3 &ndash; Complete RESTful APIs</a></li>
+            <li><a href="#setup-database">8. Setup Database</a></li>
+            <li><a href="#api-request-methods">9. API Request Methods</a></li>
+            <li><a href="#auth">10. Authentication &amp; Authorization</a></li>
+            <li><a href="#authenticate-requests">11. Authenticate Requests</a></li>
+            <li><a href="#production-database">12. Large Production Database Setup</a></li>
+            <li><a href="#project-3-5">13. Project 3.5 &ndash; Alembic Data Migration</a></li>
+            <li><a href="#project-4">14. Project 4 &ndash; Unit &amp; Integration Testing</a></li>
+            <li><a href="#project-5">15. Project 5 &ndash; Full Stack Application</a></li>
+            <li><a href="#git">16. Git &ndash; Version Control</a></li>
+            <li><a href="#deploying">17. Deploying FastAPI Applications</a></li>
+            <li><a href="#legacy-fullstack">18. (Optional) FastAPI &lt; 0.100.0 Full Stack Application</a></li>
+            <li><a href="#summary">19. Summary</a></li>
+          </ul>
+        </div>
+
+        <div class="article-body">
+          <p>
+            I already know basic Python, and now I want to go deep on <strong>FastAPI</strong> specifically.
+            I'm following the Udemy course
+            <a href="https://www.udemy.com/course/fastapi-the-complete-course/?srsltid=AU7gw4WHhjUkEjFJ3oyvjsrST0UNoFzBW8FlVpPcSUXpPTBosgV7mbDP" target="_blank" rel="noopener">FastAPI - The Complete Course</a>
+            end to end, section by section, and using this page as a living notebook for everything I learn
+            along the way &mdash; commands, concepts, gotchas, and links to the project code.
+          </p>
+
+          <h2 id="resources">Links &amp; Resources</h2>
+          <p>Course outline, my own practice repos, and the best FastAPI tutorials I've found on YouTube.</p>
+          <table>
+            <thead>
+              <tr><th>Course</th><th>My Repos</th><th>YouTube Tutorials</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.udemy.com/course/fastapi-the-complete-course/?srsltid=AU7gw4WHhjUkEjFJ3oyvjsrST0UNoFzBW8FlVpPcSUXpPTBosgV7mbDP" target="_blank" rel="noopener">Udemy: FastAPI - The Complete Course</a></td>
+                <td><a href="https://github.com/tauhidul0821/advancePy" target="_blank" rel="noopener">advancePy</a></td>
+                <td><a href="https://www.youtube.com/watch?v=8TMQcRcBnW8&t=183s" target="_blank" rel="noopener">Traversy Media &ndash; FastAPI Crash Course</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="https://github.com/tauhidul0821/fastAPI-basic-to-advance" target="_blank" rel="noopener">fastAPI-basic-to-advance</a></td>
+                <td><a href="https://www.youtube.com/watch?v=7AMjmCTumuo&list=PL-osiE80TeTsak-c-QsVeg0YYG_0TeyXI" target="_blank" rel="noopener">Corey Schafer &ndash; FastAPI Tutorial Series</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="https://github.com/tauhidul0821/crud-with-fastify" target="_blank" rel="noopener">crud-with-fastify</a></td>
+                <td><a href="https://www.youtube.com/watch?v=foGklduxhM0" target="_blank" rel="noopener">Chai aur Code &ndash; FastAPI Tutorial</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="introduction">1. Introduction</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="python-refresher">2. Python Installation &amp; Refresher</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="fastapi-overview">3. FastAPI Overview</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="fastapi-setup">4. FastAPI Setup &amp; Installation</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="project-1">5. Project 1 &ndash; FastAPI Request Method Logic</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="project-2">6. Project 2 &ndash; Move Fast with FastAPI</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="project-3">7. Project 3 &ndash; Complete RESTful APIs</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="setup-database">8. Setup Database</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="api-request-methods">9. API Request Methods</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="auth">10. Authentication &amp; Authorization</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="authenticate-requests">11. Authenticate Requests</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="production-database">12. Large Production Database Setup</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="project-3-5">13. Project 3.5 &ndash; Alembic Data Migration</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="project-4">14. Project 4 &ndash; Unit &amp; Integration Testing</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="project-5">15. Project 5 &ndash; Full Stack Application</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="git">16. Git &ndash; Version Control</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="deploying">17. Deploying FastAPI Applications</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="legacy-fullstack">18. (Optional) FastAPI &lt; 0.100.0 Full Stack Application</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+
+          <h2 id="summary">19. Summary</h2>
+          <p class="note-placeholder"><em>Notes coming soon.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Tauhidul Islam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
