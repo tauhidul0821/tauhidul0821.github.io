@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"^a \\\\|^a{\\\\|^a,\\\\|^a:link\\\\|color: #4fc08d\" \"/Users/cogwheelanalytics/worksplace/tauhidul0821.github.io/css/portfolio.css\")",
+      "Bash(python3 -m http.server 8123)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8123/index.html)",
+      "Bash(pkill -f \"http.server 8123\")",
+      "Bash(nohup python3 -m http.server 8123)",
+      "Bash(disown)"
+    ]
+  }
+}

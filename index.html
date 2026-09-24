@@ -24,17 +24,10 @@
         <ul class="nav-menu">
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
           <li><a href="#work">Work</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="notes/index.html">Notes</a></li>
-          <!-- <li><a href="#ancestor">Ancestor</a></li>
-          <li><a href="#ancestor2">Ancestor2</a></li> -->
+          <li><a href="#notes">Notes</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#social-qr">Social</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -76,45 +69,6 @@
           Connect with me on <a href="https://github.com/tauhidul0821" target="_blank">GitHub</a> or 
           <a href="https://www.linkedin.com/in/md-tauhidul-islam-bbb93b81" target="_blank">LinkedIn</a>.
         </p>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-      <div class="container">
-        <h2>Services</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Web Development</h3>
-            <p>Building responsive and modern web applications using latest technologies and frameworks.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h3>Frontend Development</h3>
-            <p>Creating beautiful and intuitive user interfaces with Angular, React, and modern CSS frameworks.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">⚙️</div>
-            <h3>Backend Development</h3>
-            <p>Developing robust server-side applications with Node.js and RESTful API design.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">🗄️</div>
-            <h3>Database Design</h3>
-            <p>Designing and optimizing database schemas for efficient data storage and retrieval.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">🔧</div>
-            <h3>Code Review</h3>
-            <p>Providing thorough code reviews and best practices consultation for development teams.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">🚀</div>
-            <h3>Performance Optimization</h3>
-            <p>Optimizing application performance for better user experience and scalability.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -257,7 +211,9 @@
     <section id="work">
       <div class="container">
         <h2>Featured Projects</h2>
-        <div class="work-grid">
+        <div class="work-carousel carousel">
+          <button class="carousel-btn carousel-prev" aria-label="Previous project">&#8249;</button>
+          <div class="work-track carousel-track">
           <div class="work-item">
             <div class="work-image">📊</div>
             <div class="work-content">
@@ -353,39 +309,65 @@
               </div>
             </div>
           </div>
+          </div>
+          <button class="carousel-btn carousel-next" aria-label="Next project">&#8250;</button>
         </div>
       </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog">
+    <!-- Notes Section -->
+    <section id="notes">
       <div class="container">
-        <h2>Latest Blog Posts</h2>
-        <div class="blog-grid">
-          <a href="tutorial/advance-typescript.html" class="blog-card">
-            <div class="blog-image">✍️</div>
-            <div class="blog-content">
-              <h3>Understanding TypeScript Generics</h3>
-              <span class="blog-date">December 10, 2025</span>
-              <p>A deep dive into TypeScript generics and how they can make your code more reusable and type-safe.</p>
-            </div>
-          </a>
-          <a href="tutorial/angular-performance.html" class="blog-card">
-            <div class="blog-image">⚡</div>
-            <div class="blog-content">
-              <h3>Angular Performance Optimization Tips</h3>
-              <span class="blog-date">November 15, 2025</span>
-              <p>Practical tips and techniques to optimize your angular applications for better performance.</p>
-            </div>
-          </a>
-          <a href="tutorial/ui-ux-design.html" class="blog-card">
-            <div class="blog-image">🎨</div>
-            <div class="blog-content">
-              <h3>UI/UX Design</h3>
-              <span class="blog-date">August 25, 2026</span>
-              <p>Core principles for designing intuitive, accessible, and beautiful user interfaces.</p>
-            </div>
-          </a>
+        <h2>Notes</h2>
+        <p class="section-subtitle">A running scratchpad of things I'm learning right now.</p>
+        <div class="notes-carousel carousel">
+          <button class="carousel-btn carousel-prev" aria-label="Previous note">&#8249;</button>
+          <div class="notes-track carousel-track">
+            <a href="notes/deutsch-language.html" class="blog-card notes-card">
+              <div class="blog-image">🇩🇪</div>
+              <div class="blog-content">
+                <h3>Deutsch (German) Language</h3>
+                <span class="blog-date">Updated August 29, 2026</span>
+                <p>Alphabet, pronunciation, numbers and personal pronouns - my running notes while learning German.</p>
+              </div>
+            </a>
+            <a href="notes/english-language.html" class="blog-card notes-card">
+              <div class="blog-image">🇬🇧</div>
+              <div class="blog-content">
+                <h3>English Language</h3>
+                <span class="blog-date">Updated September 12, 2026</span>
+                <p>Subject-verb agreement rules and examples - my running notes while learning English grammar.</p>
+              </div>
+            </a>
+            <a href="notes/quran-notes.html" class="blog-card notes-card">
+              <div class="blog-image">📖</div>
+              <div class="blog-content">
+                <h3>Qur'an Notes</h3>
+                <span class="blog-date">Updated September 13, 2026</span>
+                <p>Verses from the Holy Qur'an with Arabic text, translation, and my own research on each one.</p>
+              </div>
+            </a>
+            <a href="notes/fast-api.html" class="blog-card notes-card">
+              <div class="blog-image">🐍</div>
+              <div class="blog-content">
+                <h3>Python & FastAPI</h3>
+                <span class="blog-date">Updated September 15, 2026</span>
+                <p>Following the Udemy FastAPI complete course step by step - setup, projects, auth, databases, testing and deployment.</p>
+              </div>
+            </a>
+            <a href="notes/ui-ux.html" class="blog-card notes-card">
+              <div class="blog-image">🎨</div>
+              <div class="blog-content">
+                <h3>UI/UX Design</h3>
+                <span class="blog-date">Updated September 15, 2026</span>
+                <p>Learning UI/UX fundamentals - design principles, color theory, wireframing, prototyping and tools.</p>
+              </div>
+            </a>
+          </div>
+          <button class="carousel-btn carousel-next" aria-label="Next note">&#8250;</button>
+        </div>
+        <div class="notes-view-all">
+          <a href="notes/index.html">View All Notes →</a>
         </div>
       </div>
     </section>
@@ -624,6 +606,24 @@
       });
       backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Carousels (Notes, Work)
+      document.querySelectorAll('.carousel').forEach((carousel) => {
+        const track = carousel.querySelector('.carousel-track');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        if (!track || !prevBtn || !nextBtn) return;
+
+        const scrollByCard = (direction) => {
+          const card = track.firstElementChild;
+          const gap = parseFloat(getComputedStyle(track).gap) || 0;
+          const cardWidth = card ? card.getBoundingClientRect().width + gap : 300;
+          track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        };
+
+        prevBtn.addEventListener('click', () => scrollByCard(-1));
+        nextBtn.addEventListener('click', () => scrollByCard(1));
       });
     </script>
   </body>
