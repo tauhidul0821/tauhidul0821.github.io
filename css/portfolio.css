@@ -772,6 +772,26 @@ section h2::after {
   background: #f8f9fa;
 }
 
+/* Let long unbroken link text (e.g. profile.php?id=...) wrap instead of widening the table */
+.article-body td a {
+  overflow-wrap: anywhere;
+}
+
+/* On small screens, wide tables scroll inside themselves instead of breaking the page width */
+@media (max-width: 600px) {
+  .article-body table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+  }
+
+  .article-body th,
+  .article-body td {
+    padding: 0.5rem 0.6rem;
+  }
+}
+
 .article-body hr {
   border: none;
   border-top: 1px solid #e5e5e5;
