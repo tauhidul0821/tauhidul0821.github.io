@@ -17,8 +17,8 @@
   <body>
     <button id="backToTop" class="back-to-top" aria-label="Scroll to top" title="Back to top">&uarr;</button>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation (floats transparently over the home photo; turns white once you scroll past it) -->
+    <nav class="navbar navbar-overlay">
       <div class="container nav-container">
         <a href="#home" class="logo">Tauhidul Islam</a>
         <ul class="nav-menu">
@@ -27,7 +27,6 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#notes">Notes</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -44,8 +43,9 @@
           <h1>Hi! I'm Tauhidul</h1>
           <p class="subtitle">I'm a Web Developer Angular / JavaScript</p>
           <div class="hero-buttons">
-            <a href="javascript:void(0)" onclick="openCVModal()" class="btn btn-transparent">View CV</a>
-            <a href="assets/cv/Tauhidul_JavaScript_Angular.pdf" download class="btn btn-transparent">Download CV</a>
+            <a href="javascript:void(0)" onclick="openCVModal()" class="btn btn-hero">View CV</a>
+            <a href="https://docs.google.com/document/d/1l85RiqXtVltSuelpAqLwifWZlbti9h-a/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-hero">CV on Google Docs</a>
+            <a href="assets/cv/Tauhidul_JavaScript_Angular.pdf" download class="btn btn-hero">Download CV</a>
           </div>
         </div>
       </div>
@@ -372,107 +372,18 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-          <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hello!</p>
-          
-          <div class="contact-info">
-            <div class="contact-item">
-              <h4>📧 Email</h4>
-              <p>tauhidul0821@gmail.com</p>
-            </div>
-            <div class="contact-item">
-              <h4>📍 Location</h4>
-              <p>Bangladesh</p>
-            </div>
-            <div class="contact-item">
-              <h4>💼 LinkedIn</h4>
-              <p><a href="https://www.linkedin.com/in/md-tauhidul-islam-bbb93b81" target="_blank">Connect with me</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social Media QR Section -->
-    <section id="social-qr" style="background: #fff; padding: 60px 0;">
-      <div class="container">
-        <h2>Connect via Social Media</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">
-          Scan any QR code with your phone to connect with me instantly
-        </p>
-        
-        <div class="social-qr-grid">
-          <!-- Facebook -->
-          <div class="social-qr-card">
-            <div class="social-qr-image" onclick="openModal('Facebook', 'assets/images/social/facebook/facebook_qr_tuhin234.png', 'Scan this QR code with your phone camera to follow me on Facebook')">
-              <img src="assets/images/social/facebook/facebook_qr_tuhin234.png" alt="Facebook QR Code">
-            </div>
-            <h3>
-              <a href="https://www.facebook.com/tuhin234" target="_blank" style="color: #121314; text-decoration: none;">Facebook</a>
-            </h3>
-          </div>
-          
-          <!-- Instagram -->
-          <div class="social-qr-card">
-            <div class="social-qr-image" onclick="openModal('Instagram', 'assets/images/social/instagram/insta.png', 'Scan this QR code with your phone camera to follow me on Instagram')">
-              <img src="assets/images/social/instagram/insta.png" alt="Instagram QR Code">
-            </div>
-            <h3>
-              <a href="https://www.instagram.com/tauhidul_islam_tuhin/" target="_blank" style="color: #121314; text-decoration: none;">Instagram</a>
-            </h3>
-          </div>
-          
-          <!-- LinkedIn -->
-          <div class="social-qr-card">
-            <div class="social-qr-image" onclick="openModal('LinkedIn', 'assets/images/social/linkedIn/linked.jpg', 'Scan this QR code with your phone camera to connect with me on LinkedIn')">
-              <img src="assets/images/social/linkedIn/linked.jpg" alt="LinkedIn QR Code">
-            </div>
-            <h3>
-              <a href="https://www.linkedin.com/in/tauhidul0821/" target="_blank" style="color: #121314; text-decoration: none;">LinkedIn</a>
-            </h3>
-          </div>
-          
-          <!-- WeChat -->
-          <div class="social-qr-card">
-            <div class="social-qr-image" onclick="openModal('WeChat', 'assets/images/social/weChat/dummy_wechat_qr.png', 'Scan this QR code with WeChat app to add me')">
-              <img src="assets/images/social/weChat/dummy_wechat_qr.png" alt="WeChat QR Code">
-            </div>
-            <h3>
-              <a href="https://www.facebook.com/tuhin234" target="_blank" style="color: #121314; text-decoration: none;">WeChat</a>
-            </h3>
-          </div>
-          
-          <!-- WhatsApp -->
-          <div class="social-qr-card">
-            <div class="social-qr-image" onclick="openModal('WhatsApp', 'assets/images/social/whatsApp/whats.jpg', 'Scan this QR code with WhatsApp to message me directly')">
-              <img src="assets/images/social/whatsApp/whats.jpg" alt="WhatsApp QR Code">
-            </div>
-            <h3>
-              <a href="https://wa.me/8801749913179" target="_blank" style="color: #121314; text-decoration: none;">WhatsApp</a>
-            </h3>
-          </div>
-          
-          <!-- Twitter -->
-          <div class="social-qr-card">
-            <div class="social-qr-image" onclick="openModal('X', 'assets/images/social/x/qr_x_tauhidul.png', 'Scan this QR code with your phone camera to follow me on Twitter')">
-              <img src="assets/images/social/x/qr_x_tauhidul.png" alt="X QR Code">
-            </div>
-            <h3>
-              <a href="https://x.com/TauhidulIslamT2" target="_blank" style="color: #121314; text-decoration: none;">X.com</a>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer (with compact social links: click a platform to see its QR code + link) -->
     <footer>
-      <div class="container">
+      <div class="container footer-inner">
         <p>&copy; 2026 Tauhidul Islam. All rights reserved.</p>
+        <ul class="footer-social" aria-label="Social media">
+          <li><button type="button" onclick="openModal('Facebook', 'assets/images/social/facebook/facebook_qr_tuhin234.png', 'Scan this QR code with your phone camera to follow me on Facebook', 'https://www.facebook.com/tuhin234')">Facebook</button></li>
+          <li><button type="button" onclick="openModal('Instagram', 'assets/images/social/instagram/insta.png', 'Scan this QR code with your phone camera to follow me on Instagram', 'https://www.instagram.com/tauhidul_islam_tuhin/')">Instagram</button></li>
+          <li><button type="button" onclick="openModal('LinkedIn', 'assets/images/social/linkedIn/linked.jpg', 'Scan this QR code with your phone camera to connect with me on LinkedIn', 'https://www.linkedin.com/in/tauhidul0821/')">LinkedIn</button></li>
+          <li><button type="button" onclick="openModal('WeChat', 'assets/images/social/weChat/dummy_wechat_qr.png', 'Scan this QR code with the WeChat app to add me')">WeChat</button></li>
+          <li><button type="button" onclick="openModal('WhatsApp', 'assets/images/social/whatsApp/whats.jpg', 'Scan this QR code with WhatsApp to message me directly', 'https://wa.me/8801749913179')">WhatsApp</button></li>
+          <li><button type="button" onclick="openModal('X', 'assets/images/social/x/qr_x_tauhidul.png', 'Scan this QR code with your phone camera to follow me on X', 'https://x.com/TauhidulIslamT2')">X</button></li>
+        </ul>
       </div>
     </footer>
 
@@ -483,6 +394,7 @@
         <h3 id="modalTitle"></h3>
         <p id="modalDescription"></p>
         <img id="modalQRImage" src="" alt="QR Code">
+        <a id="modalLink" class="modal-link" target="_blank" rel="noopener"></a>
       </div>
     </div>
 
@@ -536,17 +448,39 @@
         });
       });
 
+      // Navbar: transparent over the home photo, white after scrolling past it
+      const navbar = document.querySelector('.navbar-overlay');
+      const homeSection = document.getElementById('home');
+      function updateNavbar() {
+        const pastPhoto = window.scrollY > homeSection.offsetHeight - navbar.offsetHeight;
+        navbar.classList.toggle('scrolled', pastPhoto);
+      }
+      window.addEventListener('scroll', updateNavbar);
+      window.addEventListener('resize', updateNavbar);
+      updateNavbar();
+
       // Modal functions
-      function openModal(title, imageSrc, description) {
+      function openModal(title, imageSrc, description, link) {
         const modal = document.getElementById('qrModal');
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
         const modalImage = document.getElementById('modalQRImage');
+        const modalLink = document.getElementById('modalLink');
         
         modalTitle.textContent = title;
         modalDescription.textContent = description;
         modalImage.src = imageSrc;
         modalImage.alt = title + ' QR Code';
+
+        // Show the profile link under the QR code (hidden when there's no link, e.g. WeChat)
+        if (link) {
+          modalLink.href = link;
+          modalLink.textContent = link.replace(/^https?:\/\//, '').replace(/\/$/, '');
+          modalLink.style.display = 'inline-block';
+        } else {
+          modalLink.removeAttribute('href');
+          modalLink.style.display = 'none';
+        }
         
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -582,8 +516,11 @@
       // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          // only handle in-page links (#about, #work...), let real URLs open normally
+          if (!href || !href.startsWith('#') || href === '#') return;
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+          const target = document.querySelector(href);
           if (target) {
             target.scrollIntoView({
               behavior: 'smooth',

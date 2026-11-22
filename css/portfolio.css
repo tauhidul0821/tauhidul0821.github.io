@@ -32,6 +32,21 @@ body {
   padding: 1rem 0;
 }
 
+/* Homepage only: navbar sits on top of the full-screen photo */
+.navbar-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-overlay.scrolled {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -119,12 +134,12 @@ section h2::after {
 
 /* Hero Section */
 #home {
-  min-height: 90vh;
+  min-height: 100vh;               /* photo fills the whole first screen, behind the navbar */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;           /* text sits at the bottom... */
   padding-top: 100px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/my-photo/my-image.png');
+  padding-bottom: 4rem;
+  background-image: url('../assets/images/my-photo/my-image.png');   /* the photo as-is, no overlay */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -132,32 +147,35 @@ section h2::after {
   position: relative;
 }
 
+#home .container {
+  width: 100%;
+}
+
 .hero-content {
-  text-align: center;
+  text-align: left;                /* ...and on the left */
+  max-width: 560px;
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  letter-spacing: 1px;
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #121314;
+  letter-spacing: 0.5px;
 }
 
 .hero-content .subtitle {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #ffffff;
-  margin-bottom: 3rem;
-  line-height: 1.6;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #121314;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  gap: 1.75rem;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -201,24 +219,23 @@ section h2::after {
   color: #fff;
 }
 
-/* Transparent button for hero section */
-.btn-transparent {
-  background: transparent !important;
-  border: 1px solid #ffffff !important;
-  color: #ffffff !important;
-  padding: 14px 35px;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-weight: 500;
+/* Hero links (View CV / Download CV) - plain text only: no fill, border or colour effects */
+.btn-hero,
+.btn-hero:hover {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+  background: transparent;
+  color: #121314;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
 }
 
-.btn-transparent:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: #4fc08d !important;
-  color: #4fc08d !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(79, 192, 141, 0.4);
+.btn-hero:hover {
+  opacity: 0.7;
 }
 
 /* About Section */
@@ -822,37 +839,6 @@ section h2::after {
   cursor: zoom-in;
 }
 
-/* Contact Section */
-#contact {
-  background: #f8f9fa;
-}
-
-.contact-content {
-  max-width: 800px;
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.contact-item {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-item h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #4fc08d;
-}
-
 /* QR Codes */
 .qr-grid {
   display: grid;
@@ -935,72 +921,6 @@ section h2::after {
   margin-right: auto;
 }
 
-/* Social Media QR Section - Compact Bottom Section */
-.social-qr-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.social-qr-card {
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.social-qr-card:hover {
-  transform: scale(1.05);
-}
-
-.social-qr-image {
-  width: 100%;
-  /* max-width: 220px;
-  height: 220px; */
-  margin: 0 auto 1.5rem;
-  background: #fff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  border: 3px solid #f0f0f0;
-}
-
-.social-qr-card:hover .social-qr-image {
-  box-shadow: 0 8px 30px rgba(79, 192, 141, 0.25);
-  border-color: #4fc08d;
-}
-
-.social-qr-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.social-qr-card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #121314;
-  margin: 0;
-}
-
-/* Adjust for 2nd row with 2 items */
-.social-qr-card:nth-child(4) {
-  grid-column: 1 / 2;
-  margin-left: auto;
-  margin-right: 1.5rem;
-}
-
-.social-qr-card:nth-child(5) {
-  grid-column: 2 / 3;
-  margin-left: 1.5rem;
-  margin-right: auto;
-}
-
 /* Modal */
 .modal {
   display: none;
@@ -1062,6 +982,26 @@ section h2::after {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+#modalQRImage {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.modal-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #4fc08d;
+  font-weight: 500;
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
 }
 
 /* CV Modal Styles */
@@ -1446,6 +1386,50 @@ footer p {
   font-size: 0.95rem;
 }
 
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.footer-social button:hover,
+.footer-social button:focus-visible {
+  background: #4fc08d;
+  border-color: #4fc08d;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hamburger {
@@ -1469,12 +1453,23 @@ footer p {
     left: 0;
   }
 
+  /* Phones: photo on top (face in view), text underneath on plain white so it never sits on the photo */
+  #home {
+    min-height: auto;
+    padding-top: calc(55vh + 1.5rem);
+    padding-bottom: 2.5rem;
+    background-color: #fff;
+    background-size: auto 55vh;
+    background-position: 72% top;
+    background-attachment: scroll;
+  }
+
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero-content .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .about-content {
@@ -1521,23 +1516,6 @@ footer p {
     max-width: 240px;
     max-height: 240px;
   }
-
-  .social-qr-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .social-qr-card:nth-child(4),
-  .social-qr-card:nth-child(5) {
-    grid-column: auto;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .social-qr-image {
-    max-width: 200px;
-    height: 200px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1548,6 +1526,11 @@ footer p {
   .btn {
     display: block;
     margin-bottom: 1rem;
+  }
+
+  .hero-buttons .btn-hero {
+    display: inline-block;
+    margin-bottom: 0;
   }
 
   .qr-image-container {
@@ -1561,16 +1544,6 @@ footer p {
 
   .qr-content {
     padding: 1.5rem 1rem;
-  }
-
-  .social-qr-image {
-    max-width: 180px;
-    height: 180px;
-    padding: 1rem;
-  }
-
-  .social-qr-card h3 {
-    font-size: 1.1rem;
   }
 }
 
