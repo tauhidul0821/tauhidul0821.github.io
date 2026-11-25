@@ -76,46 +76,46 @@
     <section id="skills">
       <div class="container">
         <h2>Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Frontend Technologies</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Angular</span>
-              <span class="skill-tag">React.js</span>
-              <span class="skill-tag">Vue.js</span>
-              <span class="skill-tag">HTML5</span>
-              <span class="skill-tag">CSS3</span>
-              <span class="skill-tag">SASS</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Backend Technologies</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">Express.js</span>
-              <span class="skill-tag">RESTful APIs</span>
-              <span class="skill-tag">GraphQL</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">MySQL</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Tools & Others</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">ClickUp</span>
-              <span class="skill-tag">PrimeNG</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">AWS</span>
-              <span class="skill-tag">Agile/Scrum</span>
-              <span class="skill-tag">CI/CD</span>
-              <span class="skill-tag">Jest</span>
-              <span class="skill-tag">Webpack</span>
-            </div>
-          </div>
+        <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+          <button type="button" class="skills-tab active" role="tab" id="tab-frontend" aria-selected="true" aria-controls="panel-frontend" tabindex="0">Front-End</button>
+          <button type="button" class="skills-tab" role="tab" id="tab-backend" aria-selected="false" aria-controls="panel-backend" tabindex="-1">Back-End</button>
+          <button type="button" class="skills-tab" role="tab" id="tab-databases" aria-selected="false" aria-controls="panel-databases" tabindex="-1">Databases</button>
+          <button type="button" class="skills-tab" role="tab" id="tab-devops" aria-selected="false" aria-controls="panel-devops" tabindex="-1">DevOps</button>
+          <button type="button" class="skills-tab" role="tab" id="tab-tools" aria-selected="false" aria-controls="panel-tools" tabindex="-1">Tools &amp; Testing</button>
+        </div>
+        <div class="skills-panel" role="tabpanel" id="panel-frontend" aria-labelledby="tab-frontend">
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" loading="lazy"></div><span>JavaScript</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" alt="" loading="lazy"></div><span>TypeScript</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/angular/angular-original.svg" alt="" loading="lazy"></div><span>Angular</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" loading="lazy"></div><span>React</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vuejs/vuejs-original.svg" alt="" loading="lazy"></div><span>Vue.js</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" loading="lazy"></div><span>HTML5</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" loading="lazy"></div><span>CSS3</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/sass/sass-original.svg" alt="" loading="lazy"></div><span>Sass</span></div>
+        </div>
+        <div class="skills-panel" role="tabpanel" id="panel-backend" aria-labelledby="tab-backend" hidden>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" alt="" loading="lazy"></div><span>Node.js</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg" alt="" loading="lazy"></div><span>Express.js</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/openapi/openapi-original.svg" alt="" loading="lazy"></div><span>RESTful APIs</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/graphql/graphql-plain.svg" alt="" loading="lazy"></div><span>GraphQL</span></div>
+        </div>
+        <div class="skills-panel" role="tabpanel" id="panel-databases" aria-labelledby="tab-databases" hidden>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mongodb/mongodb-original.svg" alt="" loading="lazy"></div><span>MongoDB</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="" loading="lazy"></div><span>PostgreSQL</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" loading="lazy"></div><span>MySQL</span></div>
+        </div>
+        <div class="skills-panel" role="tabpanel" id="panel-devops" aria-labelledby="tab-devops" hidden>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" loading="lazy"></div><span>Docker</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" loading="lazy"></div><span>AWS</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/githubactions/githubactions-original.svg" alt="" loading="lazy"></div><span>CI/CD</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" loading="lazy"></div><span>Git</span></div>
+        </div>
+        <div class="skills-panel" role="tabpanel" id="panel-tools" aria-labelledby="tab-tools" hidden>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jest/jest-plain.svg" alt="" loading="lazy"></div><span>Jest</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/webpack/webpack-original.svg" alt="" loading="lazy"></div><span>Webpack</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><span class="skill-logo-fallback">PN</span></div><span>PrimeNG</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/clickup.svg" alt="" loading="lazy"></div><span>ClickUp</span></div>
+          <div class="skill-logo"><div class="skill-logo-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jira/jira-original.svg" alt="" loading="lazy"></div><span>Agile/Scrum</span></div>
         </div>
       </div>
     </section>
@@ -211,9 +211,7 @@
     <section id="work">
       <div class="container">
         <h2>Featured Projects</h2>
-        <div class="work-carousel carousel">
-          <button class="carousel-btn carousel-prev" aria-label="Previous project">&#8249;</button>
-          <div class="work-track carousel-track">
+        <div class="work-grid">
           <div class="work-item">
             <div class="work-image">📊</div>
             <div class="work-content">
@@ -229,7 +227,7 @@
             </div>
           </div>
           <div class="work-item">
-            <div class="work-image">�</div>
+            <div class="work-image">💳</div>
             <div class="work-content">
               <h3>Convenience Pay</h3>
               <span class="project-date">Feb 2022 - Sep 2024</span>
@@ -284,7 +282,7 @@
             </div>
           </div>
           <div class="work-item">
-            <div class="work-image">�</div>
+            <div class="work-image">📚</div>
             <div class="work-content">
               <h3>Student 2 Student</h3>
               <span class="project-date">Jun 2020 - Dec 2020</span>
@@ -309,8 +307,6 @@
               </div>
             </div>
           </div>
-          </div>
-          <button class="carousel-btn carousel-next" aria-label="Next project">&#8250;</button>
         </div>
       </div>
     </section>
@@ -320,51 +316,47 @@
       <div class="container">
         <h2>Notes</h2>
         <p class="section-subtitle">A running scratchpad of things I'm learning right now.</p>
-        <div class="notes-carousel carousel">
-          <button class="carousel-btn carousel-prev" aria-label="Previous note">&#8249;</button>
-          <div class="notes-track carousel-track">
-            <a href="notes/deutsch-language.html" class="blog-card notes-card">
-              <div class="blog-image">🇩🇪</div>
-              <div class="blog-content">
-                <h3>Deutsch (German) Language</h3>
-                <span class="blog-date">Updated August 29, 2026</span>
-                <p>Alphabet, pronunciation, numbers and personal pronouns - my running notes while learning German.</p>
-              </div>
-            </a>
-            <a href="notes/english-language.html" class="blog-card notes-card">
-              <div class="blog-image">🇬🇧</div>
-              <div class="blog-content">
-                <h3>English Language</h3>
-                <span class="blog-date">Updated September 12, 2026</span>
-                <p>Subject-verb agreement rules and examples - my running notes while learning English grammar.</p>
-              </div>
-            </a>
-            <a href="notes/quran-notes.html" class="blog-card notes-card">
-              <div class="blog-image">📖</div>
-              <div class="blog-content">
-                <h3>Qur'an Notes</h3>
-                <span class="blog-date">Updated September 13, 2026</span>
-                <p>Verses from the Holy Qur'an with Arabic text, translation, and my own research on each one.</p>
-              </div>
-            </a>
-            <a href="notes/fast-api.html" class="blog-card notes-card">
-              <div class="blog-image">🐍</div>
-              <div class="blog-content">
-                <h3>Python & FastAPI</h3>
-                <span class="blog-date">Updated September 15, 2026</span>
-                <p>Following the Udemy FastAPI complete course step by step - setup, projects, auth, databases, testing and deployment.</p>
-              </div>
-            </a>
-            <a href="notes/ui-ux.html" class="blog-card notes-card">
-              <div class="blog-image">🎨</div>
-              <div class="blog-content">
-                <h3>UI/UX Design</h3>
-                <span class="blog-date">Updated September 15, 2026</span>
-                <p>Learning UI/UX fundamentals - design principles, color theory, wireframing, prototyping and tools.</p>
-              </div>
-            </a>
-          </div>
-          <button class="carousel-btn carousel-next" aria-label="Next note">&#8250;</button>
+        <div class="blog-grid">
+          <a href="notes/deutsch-language.html" class="blog-card">
+            <div class="blog-image">🇩🇪</div>
+            <div class="blog-content">
+              <h3>Deutsch (German) Language</h3>
+              <span class="blog-date">Updated August 29, 2026</span>
+              <p>Alphabet, pronunciation, numbers and personal pronouns - my running notes while learning German.</p>
+            </div>
+          </a>
+          <a href="notes/english-language.html" class="blog-card">
+            <div class="blog-image">🇬🇧</div>
+            <div class="blog-content">
+              <h3>English Language</h3>
+              <span class="blog-date">Updated September 12, 2026</span>
+              <p>Subject-verb agreement rules and examples - my running notes while learning English grammar.</p>
+            </div>
+          </a>
+          <a href="notes/quran-notes.html" class="blog-card">
+            <div class="blog-image">📖</div>
+            <div class="blog-content">
+              <h3>Qur'an Notes</h3>
+              <span class="blog-date">Updated September 13, 2026</span>
+              <p>Verses from the Holy Qur'an with Arabic text, translation, and my own research on each one.</p>
+            </div>
+          </a>
+          <a href="notes/fast-api.html" class="blog-card">
+            <div class="blog-image">🐍</div>
+            <div class="blog-content">
+              <h3>Python & FastAPI</h3>
+              <span class="blog-date">Updated September 15, 2026</span>
+              <p>Following the Udemy FastAPI complete course step by step - setup, projects, auth, databases, testing and deployment.</p>
+            </div>
+          </a>
+          <a href="notes/ui-ux.html" class="blog-card">
+            <div class="blog-image">🎨</div>
+            <div class="blog-content">
+              <h3>UI/UX Design</h3>
+              <span class="blog-date">Updated September 15, 2026</span>
+              <p>Learning UI/UX fundamentals - design principles, color theory, wireframing, prototyping and tools.</p>
+            </div>
+          </a>
         </div>
         <div class="notes-view-all">
           <a href="notes/index.html">View All Notes →</a>
@@ -545,22 +537,25 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
-      // Carousels (Notes, Work)
-      document.querySelectorAll('.carousel').forEach((carousel) => {
-        const track = carousel.querySelector('.carousel-track');
-        const prevBtn = carousel.querySelector('.carousel-prev');
-        const nextBtn = carousel.querySelector('.carousel-next');
-        if (!track || !prevBtn || !nextBtn) return;
-
-        const scrollByCard = (direction) => {
-          const card = track.firstElementChild;
-          const gap = parseFloat(getComputedStyle(track).gap) || 0;
-          const cardWidth = card ? card.getBoundingClientRect().width + gap : 300;
-          track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-        };
-
-        prevBtn.addEventListener('click', () => scrollByCard(-1));
-        nextBtn.addEventListener('click', () => scrollByCard(1));
+      // Technical Skills tabs
+      const skillTabs = Array.from(document.querySelectorAll('.skills-tab'));
+      const selectSkillTab = (tab) => {
+        skillTabs.forEach((t) => {
+          const selected = t === tab;
+          t.classList.toggle('active', selected);
+          t.setAttribute('aria-selected', selected);
+          t.tabIndex = selected ? 0 : -1;
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+        });
+      };
+      skillTabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => selectSkillTab(tab));
+        tab.addEventListener('keydown', (e) => {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+          const next = skillTabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + skillTabs.length) % skillTabs.length];
+          selectSkillTab(next);
+          next.focus();
+        });
       });
     </script>
   </body>
