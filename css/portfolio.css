@@ -891,6 +891,53 @@ section h2::after {
   cursor: zoom-in;
 }
 
+/* Screenshot gallery (e.g. notes/deutsch-screenshots.html) */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.screenshot-gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  cursor: zoom-in;
+  background: #f3f3f3;
+  transition: transform 0.15s ease;
+}
+
+.screenshot-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 44px;
+  height: 64px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gallery-nav.prev { left: 1.25rem; }
+.gallery-nav.next { right: 1.25rem; }
+
+.gallery-counter {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
 /* QR Codes */
 .qr-grid {
   display: grid;
